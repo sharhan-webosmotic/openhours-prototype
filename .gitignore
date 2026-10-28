@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.vercel/
+.vite/
+.pnpm-store/
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+AGENTS.md
+CLAUDE.md
