@@ -94,6 +94,7 @@ button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-
 .dashboard-embedded [data-node-id='1:520']:hover { filter: brightness(.97); }
 .dashboard-full-schedule { padding: 8px 10px; border: 1px solid #dbe3f4; border-radius: 9px; color: var(--blue); background: #f7f9fe; font-family: 'Inter:Semi Bold'; font-size: 12px; white-space: nowrap; cursor: pointer; }
 .dashboard-full-schedule:hover { border-color: #b7c8f2; background: #eef3ff; }
+.settings-inline-schedule { margin-top: 16px; }
 
 .app-shell { min-height: 100vh; display: grid; grid-template-columns: 220px minmax(0, 1fr); background: var(--background); }
 .sidebar { height: 100vh; position: sticky; top: 0; display: flex; flex-direction: column; gap: 16px; padding: 26px 16px 20px; background: #fff; border-right: 1px solid var(--border); z-index: 20; }

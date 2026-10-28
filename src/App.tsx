@@ -304,7 +304,7 @@ export default function App() {
       case 'reminders': return <Reminders items={reminders} setItems={setReminders} appointments={appointments} patients={patients} toast={setToast} />
       case 'reports': return <Reports appointments={appointments} services={services} period={period} setPeriod={setPeriod} />
       case 'notifications': return <Notifications read={readNotices} setRead={setReadNotices} go={go} />
-      case 'settings': return <Settings working={working} doctors={doctors} go={go} toast={setToast} />
+      case 'settings': return <Settings working={working} setWorking={setWorking} doctors={doctors} setDoctors={setDoctors} toast={setToast} />
       default: return null
     }
   })()
@@ -846,15 +846,39 @@ function NotificationList({ read, setRead, go, compact = false }: { read: number
   return <div className={`notification-list ${compact ? 'compact' : ''}`}>{notices.map((item) => { const isRead = item.read || read.includes(item.id); return <button className={isRead ? 'read' : ''} key={item.id} onClick={() => { setRead([...read, item.id]); go(item.page) }}><i /><div><strong>{item.title}</strong><span>{item.body}</span><small>{item.time}</small></div><b>›</b></button>})}</div>
 }
 
-function Settings({ working, doctors, go, toast }: { working: WorkingHours; doctors: Doctor[]; go: (page: Page) => void; toast: (v: string) => void }) {
+function Settings({ working, setWorking, doctors, setDoctors, toast }: { working: WorkingHours; setWorking: (value: WorkingHours) => void; doctors: Doctor[]; setDoctors: (value: Doctor[]) => void; toast: (v: string) => void }) {
   const [tab, setTab] = useState<'Clinic profile' | 'Doctor availability' | 'Booking preferences' | 'AI receptionist'>('Clinic profile')
   const [clinic, setClinic] = useState(() => load('oh-clinic-profile', { name: 'Dr. Sudhir Cardiology Clinic', phone: '(415) 555-0100', email: 'hello@clinicai.example', address: '1200 Market Street, San Francisco, CA' }))
   const [preferences, setPreferences] = useState(() => load('oh-booking-preferences', { confirmation: 'Manual review for AI requests', cancellation: '24 hours' }))
   const [online, setOnline] = useState(() => load('oh-ai-online', true))
   const [selectedDoctorId, setSelectedDoctorId] = useState(doctors[0]?.id || 1)
+  const [editingSchedule, setEditingSchedule] = useState(false)
+  const [scheduleDraft, setScheduleDraft] = useState(working)
+  const [selectedDay, setSelectedDay] = useState(1)
   const selectedDoctor = doctors.find((doctor) => doctor.id === selectedDoctorId) || doctors[0]
   const schedule = selectedDoctor?.schedule || working
   const timeLabel = (value: string) => { const [hour, minute] = value.split(':').map(Number); return `${hour % 12 || 12}:${String(minute).padStart(2, '0')} ${hour >= 12 ? 'PM' : 'AM'}` }
+  const activeDays = Object.values(scheduleDraft.weekly).filter((day) => day.enabled)
+  const scheduleValid = activeDays.length > 0 && activeDays.every((day) => day.start < day.end && day.breakStart <= day.breakEnd && day.breakStart >= day.start && day.breakEnd <= day.end)
+  const changeScheduleDay = (key: keyof DayHours, value: string | boolean) => setScheduleDraft((current) => {
+    const updated = { ...current.weekly[selectedDay], [key]: value }
+    const weekly = { ...current.weekly, [selectedDay]: updated }
+    return { ...current, weekly, days: WEEKDAYS.map((_, index) => weekly[index].enabled ? index : -1).filter((index) => index >= 0) }
+  })
+  const chooseScheduleDoctor = (id: number) => {
+    const nextDoctor = doctors.find((doctor) => doctor.id === id)
+    setSelectedDoctorId(id)
+    if (editingSchedule) setScheduleDraft(nextDoctor?.schedule || working)
+  }
+  const saveDoctorSchedule = () => {
+    if (!scheduleValid || !selectedDoctor) { toast('Check clinic hours and break times before saving.'); return }
+    const baseline = scheduleDraft.weekly[scheduleDraft.days[0] ?? 1]
+    const saved = { ...scheduleDraft, start: baseline.start, end: baseline.end, breakStart: baseline.breakStart, breakEnd: baseline.breakEnd }
+    setDoctors(doctors.map((doctor) => doctor.id === selectedDoctor.id ? { ...doctor, schedule: saved } : doctor))
+    if (selectedDoctor.id === 1) setWorking(saved)
+    setEditingSchedule(false)
+    toast(`${selectedDoctor.name}’s weekly schedule was updated.`)
+  }
   const save = () => {
     localStorage.setItem('oh-clinic-profile', JSON.stringify(clinic))
     localStorage.setItem('oh-booking-preferences', JSON.stringify(preferences))
@@ -867,11 +891,21 @@ function Settings({ working, doctors, go, toast }: { working: WorkingHours; doct
     <div className="settings-tabs" role="tablist" aria-label="Clinic settings sections">{tabs.map((item) => <button type="button" role="tab" aria-selected={tab === item} className={tab === item ? 'active' : ''} key={item} onClick={() => setTab(item)}><span>{item === 'Clinic profile' ? '⌂' : item === 'Doctor availability' ? '◷' : item === 'Booking preferences' ? '▤' : '✦'}</span>{item}</button>)}</div>
     <div className="settings-content" role="tabpanel">
       {tab === 'Clinic profile' && <Card><div className="settings-panel-heading"><span className="settings-panel-icon">⌂</span><div><h2>Clinic profile</h2><p>Contact information used across the clinic workspace.</p></div></div><div className="form-grid two"><Field label="Clinic name"><input value={clinic.name} onChange={(event) => setClinic({ ...clinic, name: event.target.value })} /></Field><Field label="Clinic phone"><input type="tel" value={clinic.phone} onChange={(event) => setClinic({ ...clinic, phone: event.target.value })} /></Field><Field label="Contact email"><input type="email" value={clinic.email} onChange={(event) => setClinic({ ...clinic, email: event.target.value })} /></Field><Field label="Clinic address"><input value={clinic.address} onChange={(event) => setClinic({ ...clinic, address: event.target.value })} /></Field></div></Card>}
-      {tab === 'Doctor availability' && <Card><div className="settings-panel-heading"><span className="settings-panel-icon availability-settings-icon">◷</span><div><h2>Doctor availability</h2><p>Booking times follow each doctor’s hours for the selected weekday. Breaks and days off are unavailable.</p></div></div><div className="availability-settings-toolbar"><Field label="Doctor"><select value={selectedDoctor?.id || 1} onChange={(event) => setSelectedDoctorId(Number(event.target.value))}>{doctors.map((doctor) => <option value={doctor.id} key={doctor.id}>{doctor.name} · {doctor.specialty}</option>)}</select></Field><Button onClick={() => go('staff')}>Edit weekly schedule →</Button></div><div className="settings-week-list">{WEEKDAYS.map((day, index) => { const hours = schedule.weekly[index]; return <div className={`settings-week-row ${hours.enabled ? 'open' : 'closed'}`} key={day}><span className="settings-week-dot" /><strong>{day}</strong><span>{hours.enabled ? `${timeLabel(hours.start)} – ${timeLabel(hours.end)}` : 'Day off'}</span><small>{hours.enabled ? hours.breakStart === hours.breakEnd ? 'No break' : `Break ${timeLabel(hours.breakStart)} – ${timeLabel(hours.breakEnd)}` : 'No appointment slots'}</small></div> })}</div><div className="info-box settings-availability-note">These saved hours are used to calculate appointment slots. To change hours or breaks, edit the weekly schedule for this doctor.</div></Card>}
+      {tab === 'Doctor availability' && <Card><div className="settings-panel-heading"><span className="settings-panel-icon availability-settings-icon">◷</span><div><h2>Doctor availability</h2><p>Booking times follow each doctor’s hours for the selected weekday. Breaks and days off are unavailable.</p></div></div><div className="availability-settings-toolbar"><Field label="Doctor"><select value={selectedDoctor?.id || 1} onChange={(event) => chooseScheduleDoctor(Number(event.target.value))}>{doctors.map((doctor) => <option value={doctor.id} key={doctor.id}>{doctor.name} · {doctor.specialty}</option>)}</select></Field>{!editingSchedule && <Button onClick={() => { setScheduleDraft(schedule); setSelectedDay(1); setEditingSchedule(true) }}>Edit weekly schedule →</Button>}</div>{editingSchedule ? <WeeklyAvailabilityEditor schedule={scheduleDraft} selectedDay={selectedDay} onSelectDay={setSelectedDay} onChange={changeScheduleDay} valid={scheduleValid} onCancel={() => { setScheduleDraft(schedule); setEditingSchedule(false) }} onSave={saveDoctorSchedule} /> : <><div className="settings-week-list">{WEEKDAYS.map((day, index) => { const hours = schedule.weekly[index]; return <div className={`settings-week-row ${hours.enabled ? 'open' : 'closed'}`} key={day}><span className="settings-week-dot" /><strong>{day}</strong><span>{hours.enabled ? `${timeLabel(hours.start)} – ${timeLabel(hours.end)}` : 'Day off'}</span><small>{hours.enabled ? hours.breakStart === hours.breakEnd ? 'No break' : `Break ${timeLabel(hours.breakStart)} – ${timeLabel(hours.breakEnd)}` : 'No appointment slots'}</small></div> })}</div><div className="info-box settings-availability-note">These saved hours are used to calculate appointment slots. Choose Edit weekly schedule to change hours or breaks.</div></>}</Card>}
       {tab === 'Booking preferences' && <Card><div className="settings-panel-heading"><span className="settings-panel-icon booking-settings-icon">▤</span><div><h2>Booking preferences</h2><p>Choose how incoming booking requests and cancellations are handled in the demo.</p></div></div><div className="form-grid two"><Field label="Booking confirmation"><select value={preferences.confirmation} onChange={(event) => setPreferences({ ...preferences, confirmation: event.target.value })}><option>Manual review for AI requests</option><option>Auto-confirm available requests</option></select><small>AI requests can be reviewed from the Appointments page.</small></Field><Field label="Cancellation notice"><select value={preferences.cancellation} onChange={(event) => setPreferences({ ...preferences, cancellation: event.target.value })}><option>24 hours</option><option>48 hours</option><option>72 hours</option></select><small>Displayed as the clinic’s preferred notice period.</small></Field></div></Card>}
       {tab === 'AI receptionist' && <Card><div className="settings-panel-heading settings-ai-heading"><span className="settings-panel-icon ai-settings-icon">✦</span><div><h2>AI receptionist</h2><p>Demo controls only. No live phone system is connected.</p></div><button type="button" aria-pressed={online} aria-label="Toggle AI receptionist demo status" className={`toggle ${online ? 'on' : ''}`} onClick={() => setOnline(!online)}><i /></button></div><div className="ai-settings-status"><span className={`ai-status-dot ${online ? 'on' : ''}`} /><div><strong>Demo status: {online ? 'Online' : 'Offline'}</strong><p>{online ? 'The sample receptionist is shown as available. Call forwarding remains simulated.' : 'The sample receptionist is shown as offline.'}</p></div></div><div className="info-box">Call examples, playback, and transcripts in this prototype are fictional.</div></Card>}
     </div>
     <div className="sticky-save"><span>Changes are saved on this device.</span><Button onClick={save}>Save settings</Button></div>
+  </div>
+}
+
+function WeeklyAvailabilityEditor({ schedule, selectedDay, onSelectDay, onChange, valid, onCancel, onSave }: { schedule: WorkingHours; selectedDay: number; onSelectDay: (day: number) => void; onChange: (key: keyof DayHours, value: string | boolean) => void; valid: boolean; onCancel: () => void; onSave: () => void }) {
+  const day = schedule.weekly[selectedDay]
+  return <div className="settings-inline-schedule">
+    <div className="weekly-schedule-layout">
+      <div className="weekday-list">{WEEKDAYS.map((name, index) => { const hours = schedule.weekly[index]; return <button type="button" key={name} className={`weekday-option ${selectedDay === index ? 'selected' : ''}`} onClick={() => onSelectDay(index)}><span className="weekday-dot" /><span className="weekday-option-copy"><strong>{name}</strong><small>{hours.enabled ? `${hours.start}–${hours.end}` : 'Day off'}</small></span><span className={`day-switch ${hours.enabled ? 'on' : ''}`} onClick={(event) => { event.stopPropagation(); onSelectDay(index); onChange('enabled', !hours.enabled) }} role="switch" aria-checked={hours.enabled} aria-label={`${name} availability`} /></button> })}</div>
+      <div className="day-hours-panel"><div className="day-hours-heading"><div><h3>{WEEKDAYS[selectedDay]} availability</h3><p>{day.enabled ? 'Patients can book during these hours.' : 'Enable this day to accept appointments.'}</p></div><label className="availability-toggle"><input type="checkbox" checked={day.enabled} onChange={(event) => onChange('enabled', event.target.checked)} /><span>{day.enabled ? 'Available' : 'Day off'}</span></label></div>{day.enabled ? <><div className="hours-group"><span className="hours-group-label">Clinic hours</span><div className="form-grid two"><Field label="Starts"><input type="time" value={day.start} onChange={(event) => onChange('start', event.target.value)} /></Field><Field label="Ends"><input type="time" value={day.end} onChange={(event) => onChange('end', event.target.value)} /></Field></div></div><div className="hours-group break-group"><span className="hours-group-label">Break time <small>Optional</small></span><div className="form-grid two"><Field label="Break starts"><input type="time" value={day.breakStart} onChange={(event) => onChange('breakStart', event.target.value)} /></Field><Field label="Break ends"><input type="time" value={day.breakEnd} onChange={(event) => onChange('breakEnd', event.target.value)} /></Field></div></div></> : <div className="day-off-notice">This doctor is not available on {WEEKDAYS[selectedDay]}. No appointment slots will be offered.</div>}<div className="schedule-actions">{!valid && <span className="schedule-validation">Select an available day and make sure each day’s hours and break times fit within the clinic hours.</span>}<Button kind="secondary" onClick={onCancel}>Discard changes</Button><Button disabled={!valid} onClick={onSave}>Save weekly schedule</Button></div></div>
+    </div>
   </div>
 }
 
