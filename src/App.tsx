@@ -164,6 +164,7 @@ export default function App() {
   const [logoutOpen, setLogoutOpen] = useState(false)
   const [periodOpen, setPeriodOpen] = useState(false)
   const [period, setPeriod] = useState('Last 7 days')
+  const [periodPosition, setPeriodPosition] = useState({ top: 80, left: 12 })
   const [searchOpen, setSearchOpen] = useState(false)
   const [globalSearch, setGlobalSearch] = useState('')
   const [readNotices, setReadNotices] = useState<number[]>([])
@@ -221,7 +222,18 @@ export default function App() {
     const target = event.target as HTMLElement
     if (openDashboardAppointment(target)) return
     const calendarCard = target.closest('[data-node-id="1:663"]')
-    if (target.closest('[data-node-id="1:182"]')) { setPeriodOpen(true); return }
+    const periodTrigger = target.closest('[data-node-id="1:182"]') as HTMLElement | null
+    if (periodTrigger) {
+      const bounds = periodTrigger.getBoundingClientRect()
+      const menuWidth = Math.min(264, window.innerWidth - 24)
+      const menuHeight = 354
+      const left = Math.max(12, Math.min(bounds.left, window.innerWidth - menuWidth - 12))
+      const below = bounds.bottom + 8
+      const top = below + menuHeight <= window.innerHeight - 12 ? below : Math.max(12, bounds.top - menuHeight - 8)
+      setPeriodPosition({ top, left })
+      setPeriodOpen(true)
+      return
+    }
     if (target.closest('[data-node-id="1:109"]')) { setBooking({ open: true }); return }
     if (target.closest('[data-node-id="1:114"]')) { setNotifyOpen(true); return }
     if (target.closest('[data-node-id="1:119"]')) { setToast('Clinic support is available through the clinic settings.'); return }
@@ -305,7 +317,7 @@ export default function App() {
           <div className="dashboard-embedded" onClickCapture={dashboardClick} onKeyDownCapture={(event) => {
             if ((event.key === 'Enter' || event.key === ' ') && openDashboardAppointment(event.target as HTMLElement)) event.preventDefault()
           }}>
-            <DashboardDesign period={period} appointments={appointments} />
+            <DashboardDesign period={period} periodOpen={periodOpen} appointments={appointments} />
           </div>
         </Shell>
       ) : (
@@ -318,7 +330,7 @@ export default function App() {
       {notifyOpen && <Popover title="Notifications" onClose={() => setNotifyOpen(false)}><NotificationList compact read={readNotices} setRead={setReadNotices} go={go} /></Popover>}
       {profileOpen && <Popover title="Dr. Sudhir" onClose={() => setProfileOpen(false)}><div className="profile-card"><div className="avatar large">DS</div><strong>Dr. Sudhir</strong><span>Cardiology Specialist</span><Button kind="secondary" onClick={() => go('staff')}>View profile</Button><Button kind="danger" onClick={() => setLogoutOpen(true)}>Logout</Button></div></Popover>}
       {searchOpen && <SearchPanel query={globalSearch} patients={patients} appointments={appointments} go={go} close={() => setSearchOpen(false)} />}
-      {periodOpen && <Popover title="Reporting period" onClose={() => setPeriodOpen(false)}>{['Today', 'Last 7 days', 'Last 30 days', 'This month', 'Last month', 'Custom date range'].map((item) => <button className={`menu-row ${period === item ? 'selected' : ''}`} key={item} onClick={() => { setPeriod(item); setPeriodOpen(false); setToast(`Dashboard metrics updated for ${item}.`) }}>{item}</button>)}</Popover>}
+      {periodOpen && <div className="period-menu-scrim" onClick={() => setPeriodOpen(false)} onKeyDown={(event) => { if (event.key === 'Escape') setPeriodOpen(false) }}><div className="period-menu" role="listbox" aria-label="Reporting period" style={periodPosition} onClick={(event) => event.stopPropagation()}><div className="period-menu-heading"><strong>Reporting period</strong><button type="button" aria-label="Close reporting period menu" onClick={() => setPeriodOpen(false)}>×</button></div>{['Today', 'Last 7 days', 'Last 30 days', 'This month', 'Last month', 'Custom date range'].map((item) => <button type="button" role="option" aria-selected={period === item} className={`menu-row ${period === item ? 'selected' : ''}`} key={item} onClick={() => { setPeriod(item); setPeriodOpen(false); setToast(`Dashboard metrics updated for ${item}.`) }}>{item}</button>)}</div></div>}
       {logoutOpen && <Confirm title="Log out of ClinicAI?" body="You’ll return to the demo login screen. Your local demo records will remain available." action="Log out" onCancel={() => setLogoutOpen(false)} onConfirm={() => { sessionStorage.removeItem('clinicai-auth'); setAuth(false); setLogoutOpen(false); setPage('overview') }} />}
       {toast && <div className="toast" role="status">✓ {toast}</div>}
     </>

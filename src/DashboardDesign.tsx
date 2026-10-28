@@ -51,7 +51,7 @@ const periodMetrics = {
 
 type DashboardAppointmentStatus = { id: number; status: string }
 
-export default function ClinicAIDesktopDashboard({ period = "Last 7 days", appointments = [] }: { period?: string; appointments?: DashboardAppointmentStatus[] }) {
+export default function ClinicAIDesktopDashboard({ period = "Last 7 days", periodOpen = false, appointments = [] }: { period?: string; periodOpen?: boolean; appointments?: DashboardAppointmentStatus[] }) {
   const metrics = periodMetrics[period as keyof typeof periodMetrics] || periodMetrics["Last 7 days"];
   const periodDescription = period.toLowerCase();
   const appointmentStatus = (id: number, fallback: string) => appointments.find((appointment) => appointment.id === id)?.status ?? fallback;
@@ -310,18 +310,10 @@ export default function ClinicAIDesktopDashboard({ period = "Last 7 days", appoi
                   <div className="-translate-y-1/2 absolute h-[133px] right-[19px] top-[calc(50%+30.5px)] w-[145px]" data-node-id="1:181" data-name="Friendly Futuristic Robot Assistant 1">
                     <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFriendlyFuturisticRobotAssistant1} />
                   </div>
-                  <div className="absolute bg-white border border-[#e9edf5] border-solid h-[33px] right-[12px] rounded-[9px] top-[12px] w-[127px]" data-node-id="1:182" data-name="Dropdown - Activity period">
-                    <div className="absolute content-stretch flex h-[31px] items-center left-[14px] overflow-clip top-0 w-[67px]" data-node-id="1:183" data-name="Container">
-                      <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:184">
-                        {period}
-                      </p>
-                    </div>
-                    <div className="absolute content-stretch flex h-[31px] items-center justify-center left-[101px] top-0 w-[25px]" data-node-id="1:185" data-name="Container">
-                      <div className="h-[6px] relative shrink-0 w-[10px]" data-node-id="1:186" data-name="Icon">
-                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon15} />
-                      </div>
-                    </div>
-                  </div>
+                  <button type="button" className="dashboard-period-trigger" aria-label={`Reporting period: ${period}`} aria-haspopup="listbox" aria-expanded={periodOpen} data-node-id="1:182" data-name="Dropdown - Activity period">
+                    <span className="dashboard-period-label" data-node-id="1:183">{period}</span>
+                    <img className="dashboard-period-chevron" data-node-id="1:186" src={imgIcon15} alt="" />
+                  </button>
                 </div>
                 <div className="border border-[rgba(233,237,245,0.9)] border-solid content-stretch flex flex-[1_0_0] flex-col h-[170px] items-start justify-between max-w-[340px] min-w-px overflow-clip px-[20px] py-[19px] relative rounded-[18px] shadow-[0px_8px_30px_0px_rgba(37,55,103,0.06)]" data-node-id="1:188" style={{ backgroundImage: "linear-gradient(139.10660484196393deg, rgb(255, 255, 255) 28.868%, rgb(243, 240, 255) 92.265%)" }} data-name="Article">
                   <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="1:189" data-name="Container">
