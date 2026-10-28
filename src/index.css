@@ -1433,3 +1433,18 @@ dd { margin: 4px 0 0; color: var(--navy); font-family: 'Inter:Semi Bold'; font-s
 .period-menu .menu-row { display: flex; align-items: center; justify-content: space-between; height: 48px; padding-inline: 16px; cursor: pointer; }
 .period-menu .menu-row:hover { background: #f7f9fd; }
 .period-menu .menu-row.selected::after { content: '✓'; font-size: 13px; }
+
+/* Desktop overview must grow with the final dashboard panels so page scrolling reaches the end. */
+@media (min-width: 1281px) {
+  .dashboard-embedded { height: auto !important; min-height: 100vh; overflow: visible !important; }
+  .dashboard-embedded [data-node-id='1:3'] { height: auto !important; min-height: 100vh; overflow: visible !important; }
+  .dashboard-embedded [data-node-id='1:90'] { height: auto !important; overflow: visible !important; }
+  .dashboard-embedded [data-node-id='1:135'] {
+    height: auto !important;
+    min-height: 1080px;
+    grid-template-rows: auto !important;
+    align-items: start;
+    overflow: visible !important;
+  }
+  .dashboard-embedded [data-node-id='1:136'] { height: auto !important; overflow: visible !important; }
+}
