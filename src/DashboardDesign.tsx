@@ -1107,7 +1107,7 @@ export default function ClinicAIDesktopDashboard({ period = "Last 7 days", perio
                   </div>
                   <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="1:857" data-name="Text">
                     <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:858">
-                      4 appointments
+                      1 appointment
                     </p>
                   </div>
                 </div>
@@ -1142,93 +1142,9 @@ export default function ClinicAIDesktopDashboard({ period = "Last 7 days", perio
                     </div>
                   </div>
                 </div>
-                  <div className="dashboard-appointment-row border-[#e9edf5] border-b border-solid gap-x-[9px] gap-y-[9px] grid grid-cols-[____51px_281.17px_62.83px_25px] grid-rows-[_63px] min-h-[64px] relative shrink-0 w-full" data-node-id="1:876" data-appointment-id="2" data-name="Appointment · 10:30 AM" role="button" tabIndex={0} aria-label="Open Laura Miller’s AI booked appointment at 10:30 AM">
-                  <div className="col-1 content-stretch flex flex-col h-[16px] items-start justify-self-stretch relative row-1 self-center shrink-0" data-node-id="1:877" data-name="Container">
-                    <p className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:878">
-                      10:30 AM
-                    </p>
-                  </div>
-                  <div className="col-2 content-stretch flex flex-col h-[25px] items-start justify-self-stretch relative row-1 self-center shrink-0" data-node-id="1:879" data-name="Container">
-                    <div className="content-stretch flex flex-col h-[16px] items-start overflow-clip relative shrink-0 w-full" data-node-id="1:880" data-name="Bold Text">
-                      <p className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:881">
-                        Laura Miller
-                      </p>
-                    </div>
-                    <div className="content-stretch flex flex-col h-[17px] items-start overflow-clip pt-[3px] relative shrink-0 w-[281.172px]" data-node-id="1:882" data-name="Text">
-                      <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:883">
-                        Dr. Sudhir · Cardiology consultation
-                      </p>
-                    </div>
-                  </div>
-                  <div className="bg-[#eaf1ff] col-3 content-stretch flex h-[22px] items-center justify-self-stretch px-[8px] relative rounded-[999px] row-1 self-center shrink-0" data-node-id="1:884" data-name="Status" style={statusStyle(appointmentStatus(2, "AI Booking"))}>
-                    <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#356ae6] text-[12px] whitespace-nowrap" data-node-id="1:885">
-                      {appointmentStatus(2, "AI Booking")}
-                    </p>
-                  </div>
-                  <div className="col-4 grid grid-cols-[_18px] grid-rows-[_23px] justify-self-start px-[6px] py-px relative rounded-[7px] row-1 self-center shrink-0 size-[25px]" data-node-id="1:886" data-name="Button - Appointment actions">
-                    <div className="col-1 justify-self-center overflow-clip relative row-1 self-center shrink-0 size-[18px]" data-node-id="1:887" data-name="Icon">
-                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon27} />
-                    </div>
-                  </div>
-                </div>
-                <div className="dashboard-appointment-row border-[#e9edf5] border-b border-solid gap-x-[9px] gap-y-[9px] grid grid-cols-[____51px_281.77px_62.23px_25px] grid-rows-[_63px] min-h-[64px] relative shrink-0 w-full" data-node-id="1:892" data-appointment-id="3" data-name="Appointment · 11:15 AM" role="button" tabIndex={0} aria-label="Open Noah Johnson’s confirmed appointment at 11:15 AM">
-                  <div className="col-1 content-stretch flex flex-col h-[16px] items-start justify-self-stretch relative row-1 self-center shrink-0" data-node-id="1:893" data-name="Container">
-                    <p className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:894">
-                      11:15 AM
-                    </p>
-                  </div>
-                  <div className="col-2 content-stretch flex flex-col h-[25px] items-start justify-self-stretch relative row-1 self-center shrink-0" data-node-id="1:895" data-name="Container">
-                    <div className="content-stretch flex flex-col h-[16px] items-start overflow-clip relative shrink-0 w-full" data-node-id="1:896" data-name="Bold Text">
-                      <p className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:897">
-                        Noah Johnson
-                      </p>
-                    </div>
-                    <div className="content-stretch flex flex-col h-[17px] items-start overflow-clip pt-[3px] relative shrink-0 w-[281.766px]" data-node-id="1:898" data-name="Text">
-                      <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:899">
-                        Dr. Sudhir · Cardiology follow-up
-                      </p>
-                    </div>
-                  </div>
-                  <div className="bg-[#e7f8f2] col-3 content-stretch flex h-[22px] items-center justify-self-stretch px-[8px] relative rounded-[999px] row-1 self-center shrink-0" data-node-id="1:900" data-name="Status" style={statusStyle(appointmentStatus(3, "Confirmed"))}>
-                    <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#128461] text-[12px] whitespace-nowrap" data-node-id="1:901">
-                      {appointmentStatus(3, "Confirmed")}
-                    </p>
-                  </div>
-                  <div className="col-4 grid grid-cols-[_18px] grid-rows-[_23px] justify-self-start px-[6px] py-px relative rounded-[7px] row-1 self-center shrink-0 size-[25px]" data-node-id="1:902" data-name="Button - Appointment actions">
-                    <div className="col-1 justify-self-center overflow-clip relative row-1 self-center shrink-0 size-[18px]" data-node-id="1:903" data-name="Icon">
-                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon27} />
-                    </div>
-                  </div>
-                </div>
-                <div className="dashboard-appointment-row border-[#e9edf5] border-b border-solid gap-x-[9px] gap-y-[9px] grid grid-cols-[____51px_292.31px_51.69px_25px] grid-rows-[_63px] min-h-[64px] relative shrink-0 w-full" data-node-id="1:908" data-appointment-id="4" data-name="Appointment · 2:00 PM" role="button" tabIndex={0} aria-label="Open Sophia Davis’s pending appointment at 2 PM">
-                  <div className="col-1 content-stretch flex flex-col h-[16px] items-start justify-self-stretch relative row-1 self-center shrink-0" data-node-id="1:909" data-name="Container">
-                    <p className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:910">
-                      2:00 PM
-                    </p>
-                  </div>
-                  <div className="col-2 content-stretch flex flex-col h-[25px] items-start justify-self-stretch relative row-1 self-center shrink-0" data-node-id="1:911" data-name="Container">
-                    <div className="content-stretch flex flex-col h-[16px] items-start overflow-clip relative shrink-0 w-full" data-node-id="1:912" data-name="Bold Text">
-                      <p className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:913">
-                        Sophia Davis
-                      </p>
-                    </div>
-                    <div className="content-stretch flex flex-col h-[17px] items-start overflow-clip pt-[3px] relative shrink-0 w-[292.313px]" data-node-id="1:914" data-name="Text">
-                      <p className="[word-break:break-word] font-['Inter:Medium'] font-medium leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:915">
-                        Dr. Sudhir · ECG review
-                      </p>
-                    </div>
-                  </div>
-                  <div className="bg-[#fff5e8] col-3 content-stretch flex h-[22px] items-center justify-self-stretch px-[8px] relative rounded-[999px] row-1 self-center shrink-0" data-node-id="1:916" data-name="Status" style={statusStyle(appointmentStatus(4, "Pending"))}>
-                    <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#bd7218] text-[12px] whitespace-nowrap" data-node-id="1:917">
-                      {appointmentStatus(4, "Pending")}
-                    </p>
-                  </div>
-                  <div className="col-4 grid grid-cols-[_18px] grid-rows-[_23px] justify-self-start px-[6px] py-px relative rounded-[7px] row-1 self-center shrink-0 size-[25px]" data-node-id="1:918" data-name="Button - Appointment actions">
-                    <div className="col-1 justify-self-center overflow-clip relative row-1 self-center shrink-0 size-[18px]" data-node-id="1:919" data-name="Icon">
-                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon27} />
-                    </div>
-                  </div>
-                </div>
+                  
+                
+                
               </div>
               <div className="content-stretch flex flex-col items-start pt-[12px] relative shrink-0 w-full" data-node-id="1:924" data-name="Section:margin">
                 <div className="border-[#e9edf5] border-solid border-t content-stretch flex flex-col h-[85px] items-start pt-[13px] relative shrink-0 w-full" data-node-id="1:925" data-name="Section">
