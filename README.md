@@ -1,6 +1,6 @@
-# Open Hours
+# ClinicAI
 
-Open Hours is a React and Vite clinic operations dashboard for cardiology appointments, patient records, doctor availability, services, and call history.
+ClinicAI is a React and Vite clinic operations dashboard for cardiology appointments, patient records, doctor availability, services, and call history.
 
 ## Run locally
 

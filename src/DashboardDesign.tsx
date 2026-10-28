@@ -1,6 +1,6 @@
 const assetPathPrefix = "/assets";
 const imgFriendlyFuturisticRobotAssistant1 = `${assetPathPrefix}/53aab.png`;
-const imgIcon = "/open-hours-logo.svg";
+const imgIcon = "/clinicai-logo.svg";
 const imgIcon1 = `${assetPathPrefix}/d58e7.svg`;
 const imgIcon2 = `${assetPathPrefix}/27833.svg`;
 const imgIcon3 = `${assetPathPrefix}/be24d.svg`;
@@ -51,7 +51,7 @@ const periodMetrics = {
 
 type DashboardAppointmentStatus = { id: number; status: string }
 
-export default function OpenHoursDesktopDashboard({ period = "Last 7 days", appointments = [] }: { period?: string; appointments?: DashboardAppointmentStatus[] }) {
+export default function ClinicAIDesktopDashboard({ period = "Last 7 days", appointments = [] }: { period?: string; appointments?: DashboardAppointmentStatus[] }) {
   const metrics = periodMetrics[period as keyof typeof periodMetrics] || periodMetrics["Last 7 days"];
   const periodDescription = period.toLowerCase();
   const appointmentStatus = (id: number, fallback: string) => appointments.find((appointment) => appointment.id === id)?.status ?? fallback;
@@ -62,7 +62,7 @@ export default function OpenHoursDesktopDashboard({ period = "Last 7 days", appo
     return { backgroundColor: "#fff5e8", color: "#bd7218" };
   };
   return (
-    <div className="bg-[#f3f5fd] content-stretch flex flex-col items-start relative size-full" data-node-id="1:2" data-name="Open Hours Desktop Dashboard - /">
+    <div className="bg-[#f3f5fd] content-stretch flex flex-col items-start relative size-full" data-node-id="1:2" data-name="ClinicAI Desktop Dashboard - /">
       <div className="bg-[#f3f5fd] grid grid-cols-[220px_minmax(0,1fr)] grid-rows-[_1080px] h-[1323px] min-h-[1080px] min-w-[1920px] overflow-clip relative shrink-0 w-full" data-node-id="1:3" data-name="Body">
         <div className="bg-white border-[#e9edf5] border-r border-solid col-1 content-stretch flex flex-col h-[1080px] items-start justify-self-stretch pb-[20px] pt-[26px] px-[16px] relative row-1 self-start shrink-0" data-node-id="1:4" data-name="Sidebar">
           <div className="content-stretch flex gap-[11px] h-[71px] items-center pb-[25px] px-[10px] relative shrink-0 w-[187px]" data-node-id="1:5" data-name="Container">
@@ -73,7 +73,7 @@ export default function OpenHoursDesktopDashboard({ period = "Last 7 days", appo
             </div>
             <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="1:10" data-name="Text">
               <p className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[19px] tracking-[-0.5px] whitespace-nowrap" data-node-id="1:11">
-                Open Hours
+                ClinicAI
               </p>
             </div>
           </div>
@@ -760,7 +760,7 @@ export default function OpenHoursDesktopDashboard({ period = "Last 7 days", appo
                         </div>
                         <div className="content-stretch flex flex-col h-[21px] items-start pt-[5px] relative shrink-0 w-[224.766px]" data-node-id="1:407" data-name="Paragraph">
                           <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:408">
-                            Latest conversations handled by Open Hours
+                            Latest conversations handled by ClinicAI
                           </p>
                         </div>
                       </div>

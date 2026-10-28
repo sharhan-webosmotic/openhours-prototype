@@ -87,10 +87,10 @@ const initialAppointments: Appointment[] = [
   { id: 6, patientId: 5, serviceId: 2, date: '2025-05-22', time: '15:30', status: 'Reschedule Requested', source: 'AI Receptionist', notes: '' },
 ]
 const calls = [
-  { id: 1, date: '2025-05-19', when: 'May 19, 9:42 AM', caller: 'Laura Miller', type: 'New patient', outcome: 'Booked', duration: '4m 18s', appointmentId: 2, summary: 'Laura asked about availability and booked a cardiology consultation.', reviewed: false, transcript: [{ time: '00:00', speaker: 'AI receptionist', text: 'Thank you for calling Open Hours Cardiology. How can I help you today?' }, { time: '00:08', speaker: 'Laura Miller', text: 'I would like to book a consultation with Dr. Sudhir. I have not visited the clinic before.' }, { time: '00:21', speaker: 'AI receptionist', text: 'I can help with that. I have an available consultation on Monday at 10:30 AM. Would you like me to reserve it?' }, { time: '00:34', speaker: 'Laura Miller', text: 'Yes, that works for me.' }, { time: '00:40', speaker: 'AI receptionist', text: 'Your request is recorded. The clinic will confirm the appointment shortly.' }] },
-  { id: 2, date: '2025-05-19', when: 'May 19, 9:18 AM', caller: 'Robert Patel', type: 'Reschedule', outcome: 'Updated', duration: '2m 46s', appointmentId: 0, summary: 'Caller requested a later appointment. Clinic review is required.', reviewed: false, transcript: [{ time: '00:00', speaker: 'AI receptionist', text: 'Open Hours Cardiology, how may I assist you?' }, { time: '00:07', speaker: 'Robert Patel', text: 'I need to move my appointment to a later time if possible.' }, { time: '00:19', speaker: 'AI receptionist', text: 'I have captured your request. The clinic team will review available times and get back to you.' }, { time: '00:31', speaker: 'Robert Patel', text: 'Thank you, I appreciate it.' }] },
-  { id: 3, date: '2025-05-19', when: 'May 19, 8:54 AM', caller: 'Emma Wilson', type: 'General enquiry', outcome: 'Resolved', duration: '3m 08s', appointmentId: 0, summary: 'Asked about clinic hours and preparation guidance.', reviewed: true, transcript: [{ time: '00:00', speaker: 'AI receptionist', text: 'Thank you for calling Open Hours Cardiology. What would you like to know?' }, { time: '00:09', speaker: 'Emma Wilson', text: 'Could you tell me when the clinic is open and what I should bring to my visit?' }, { time: '00:22', speaker: 'AI receptionist', text: 'The clinic can share its current hours and recommends bringing any previous reports and a list of your current medicines.' }, { time: '00:38', speaker: 'Emma Wilson', text: 'That answers my question, thank you.' }] },
-  { id: 4, date: '2025-05-19', when: 'May 19, 8:21 AM', caller: 'James Brown', type: 'Cancellation', outcome: 'Follow-up', duration: '1m 52s', appointmentId: 0, summary: 'Cancellation request captured for staff review.', reviewed: false, transcript: [{ time: '00:00', speaker: 'AI receptionist', text: 'Open Hours Cardiology. How can I help?' }, { time: '00:06', speaker: 'James Brown', text: 'I need to cancel my upcoming appointment.' }, { time: '00:15', speaker: 'AI receptionist', text: 'I have recorded your cancellation request. A clinic team member will review it and confirm the change.' }, { time: '00:27', speaker: 'James Brown', text: 'All right. Thank you.' }] },
+  { id: 1, date: '2025-05-19', when: 'May 19, 9:42 AM', caller: 'Laura Miller', type: 'New patient', outcome: 'Booked', duration: '4m 18s', appointmentId: 2, summary: 'Laura asked about availability and booked a cardiology consultation.', reviewed: false, transcript: [{ time: '00:00', speaker: 'AI receptionist', text: 'Thank you for calling ClinicAI Cardiology. How can I help you today?' }, { time: '00:08', speaker: 'Laura Miller', text: 'I would like to book a consultation with Dr. Sudhir. I have not visited the clinic before.' }, { time: '00:21', speaker: 'AI receptionist', text: 'I can help with that. I have an available consultation on Monday at 10:30 AM. Would you like me to reserve it?' }, { time: '00:34', speaker: 'Laura Miller', text: 'Yes, that works for me.' }, { time: '00:40', speaker: 'AI receptionist', text: 'Your request is recorded. The clinic will confirm the appointment shortly.' }] },
+  { id: 2, date: '2025-05-19', when: 'May 19, 9:18 AM', caller: 'Robert Patel', type: 'Reschedule', outcome: 'Updated', duration: '2m 46s', appointmentId: 0, summary: 'Caller requested a later appointment. Clinic review is required.', reviewed: false, transcript: [{ time: '00:00', speaker: 'AI receptionist', text: 'ClinicAI Cardiology, how may I assist you?' }, { time: '00:07', speaker: 'Robert Patel', text: 'I need to move my appointment to a later time if possible.' }, { time: '00:19', speaker: 'AI receptionist', text: 'I have captured your request. The clinic team will review available times and get back to you.' }, { time: '00:31', speaker: 'Robert Patel', text: 'Thank you, I appreciate it.' }] },
+  { id: 3, date: '2025-05-19', when: 'May 19, 8:54 AM', caller: 'Emma Wilson', type: 'General enquiry', outcome: 'Resolved', duration: '3m 08s', appointmentId: 0, summary: 'Asked about clinic hours and preparation guidance.', reviewed: true, transcript: [{ time: '00:00', speaker: 'AI receptionist', text: 'Thank you for calling ClinicAI Cardiology. What would you like to know?' }, { time: '00:09', speaker: 'Emma Wilson', text: 'Could you tell me when the clinic is open and what I should bring to my visit?' }, { time: '00:22', speaker: 'AI receptionist', text: 'The clinic can share its current hours and recommends bringing any previous reports and a list of your current medicines.' }, { time: '00:38', speaker: 'Emma Wilson', text: 'That answers my question, thank you.' }] },
+  { id: 4, date: '2025-05-19', when: 'May 19, 8:21 AM', caller: 'James Brown', type: 'Cancellation', outcome: 'Follow-up', duration: '1m 52s', appointmentId: 0, summary: 'Cancellation request captured for staff review.', reviewed: false, transcript: [{ time: '00:00', speaker: 'AI receptionist', text: 'ClinicAI Cardiology. How can I help?' }, { time: '00:06', speaker: 'James Brown', text: 'I need to cancel my upcoming appointment.' }, { time: '00:15', speaker: 'AI receptionist', text: 'I have recorded your cancellation request. A clinic team member will review it and confirm the change.' }, { time: '00:27', speaker: 'James Brown', text: 'All right. Thank you.' }] },
 ]
 const notices = [
   { id: 1, title: 'Booking request needs review', body: 'Sophia Davis requested May 19 at 2:00 PM.', time: '8 min ago', read: false, page: 'appointments' as Page },
@@ -137,7 +137,7 @@ function Empty({ title = 'No records found', body = 'Try adjusting your search o
 }
 
 export default function App() {
-  const [auth, setAuth] = useState(() => sessionStorage.getItem('open-hours-auth') === 'yes')
+  const [auth, setAuth] = useState(() => sessionStorage.getItem('clinicai-auth') === 'yes')
   const [authScreen, setAuthScreen] = useState<'login' | 'forgot' | 'reset'>('login')
   const [page, setPage] = useState<Page>('overview')
   const [appointmentCalendarDate, setAppointmentCalendarDate] = useState('2025-05-19')
@@ -155,7 +155,7 @@ export default function App() {
     { id: 3, appointmentId: 5, scheduled: 'May 19, 9:00 AM', type: 'SMS', status: 'Failed' },
   ]))
   const [working, setWorking] = useState<WorkingHours>(loadWorking)
-  const [doctors, setDoctors] = useState<Doctor[]>(() => load<Doctor[]>('oh-doctors', [{ id: 1, name: 'Dr. Sudhir', specialty: 'Cardiology Specialist', email: 'doctor@openhours.example', phone: '(415) 555-0100' }]).map((doctor) => ({ ...doctor, schedule: doctor.schedule || (doctor.id === 1 ? working : defaultWorking) })))
+  const [doctors, setDoctors] = useState<Doctor[]>(() => load<Doctor[]>('oh-doctors', [{ id: 1, name: 'Dr. Sudhir', specialty: 'Cardiology Specialist', email: 'doctor@clinicai.example', phone: '(415) 555-0100' }]).map((doctor) => ({ ...doctor, schedule: doctor.schedule || (doctor.id === 1 ? working : defaultWorking) })))
   const [booking, setBooking] = useState<{ open: boolean; edit?: Appointment; initialPatient?: number; initialDate?: string }>({ open: false })
   const [selectedAppointment, setSelectedAppointment] = useState<Appointment | null>(null)
   const [toast, setToast] = useState('')
@@ -198,10 +198,10 @@ export default function App() {
       return [...current, { id: Date.now(), appointmentId: value.id, scheduled: `${value.date}, ${value.time}`, type: 'SMS', status: 'Scheduled' }]
     })
     setSelectedAppointment(value)
-    setToast(value.id > 100 ? 'Appointment created and synchronized.' : 'Appointment updated across Open Hours.')
+    setToast(value.id > 100 ? 'Appointment created and synchronized.' : 'Appointment updated across ClinicAI.')
   }
 
-  if (!auth) return <Auth screen={authScreen} setScreen={setAuthScreen} onSuccess={() => { sessionStorage.setItem('open-hours-auth', 'yes'); setAuth(true) }} />
+  if (!auth) return <Auth screen={authScreen} setScreen={setAuthScreen} onSuccess={() => { sessionStorage.setItem('clinicai-auth', 'yes'); setAuth(true) }} />
 
   const openDashboardAppointment = (target: HTMLElement) => {
     const row = target.closest<HTMLElement>('[data-appointment-id]')
@@ -319,15 +319,15 @@ export default function App() {
       {profileOpen && <Popover title="Dr. Sudhir" onClose={() => setProfileOpen(false)}><div className="profile-card"><div className="avatar large">DS</div><strong>Dr. Sudhir</strong><span>Cardiology Specialist</span><Button kind="secondary" onClick={() => go('staff')}>View profile</Button><Button kind="danger" onClick={() => setLogoutOpen(true)}>Logout</Button></div></Popover>}
       {searchOpen && <SearchPanel query={globalSearch} patients={patients} appointments={appointments} go={go} close={() => setSearchOpen(false)} />}
       {periodOpen && <Popover title="Reporting period" onClose={() => setPeriodOpen(false)}>{['Today', 'Last 7 days', 'Last 30 days', 'This month', 'Last month', 'Custom date range'].map((item) => <button className={`menu-row ${period === item ? 'selected' : ''}`} key={item} onClick={() => { setPeriod(item); setPeriodOpen(false); setToast(`Dashboard metrics updated for ${item}.`) }}>{item}</button>)}</Popover>}
-      {logoutOpen && <Confirm title="Log out of Open Hours?" body="You’ll return to the demo login screen. Your local demo records will remain available." action="Log out" onCancel={() => setLogoutOpen(false)} onConfirm={() => { sessionStorage.removeItem('open-hours-auth'); setAuth(false); setLogoutOpen(false); setPage('overview') }} />}
+      {logoutOpen && <Confirm title="Log out of ClinicAI?" body="You’ll return to the demo login screen. Your local demo records will remain available." action="Log out" onCancel={() => setLogoutOpen(false)} onConfirm={() => { sessionStorage.removeItem('clinicai-auth'); setAuth(false); setLogoutOpen(false); setPage('overview') }} />}
       {toast && <div className="toast" role="status">✓ {toast}</div>}
     </>
   )
 }
 
 function Auth({ screen, setScreen, onSuccess }: { screen: 'login' | 'forgot' | 'reset'; setScreen: (value: 'login' | 'forgot' | 'reset') => void; onSuccess: () => void }) {
-  const [email, setEmail] = useState('demo@open-hours.example')
-  const [password, setPassword] = useState('Open Hours123!')
+  const [email, setEmail] = useState('demo@clinicai.example')
+  const [password, setPassword] = useState('ClinicAI123!')
   const [confirm, setConfirm] = useState('')
   const [show, setShow] = useState(false)
   const [error, setError] = useState('')
@@ -344,15 +344,15 @@ function Auth({ screen, setScreen, onSuccess }: { screen: 'login' | 'forgot' | '
   }
   return <main className="auth-page">
     <section className="auth-brand">
-      <div className="brand-mark"><img src="/open-hours-logo.svg" alt="" /></div>
-      <div className="auth-brand-copy"><span>Open Hours</span><h1>One calm place for every clinic day.</h1><p>Appointments, patients and AI receptionist activity stay organized for Dr. Sudhir.</p></div>
+      <div className="brand-mark"><img src="/clinicai-logo.svg" alt="" /></div>
+      <div className="auth-brand-copy"><span>ClinicAI</span><h1>One calm place for every clinic day.</h1><p>Appointments, patients and AI receptionist activity stay organized for Dr. Sudhir.</p></div>
       <div className="demo-pill">Interactive client demo · No real credentials or messages</div>
     </section>
     <section className="auth-panel">
       <form className="auth-form" onSubmit={submit}>
-        <button type="button" className="mobile-logo" onClick={() => setScreen('login')}><img className="mini-mark-image" src="/open-hours-logo.svg" alt="" /> Open Hours</button>
+        <button type="button" className="mobile-logo" onClick={() => setScreen('login')}><img className="mini-mark-image" src="/clinicai-logo.svg" alt="" /> ClinicAI</button>
         <div className="eyebrow">{screen === 'login' ? 'WELCOME BACK' : 'ACCOUNT RECOVERY'}</div>
-        <h2>{screen === 'login' ? 'Sign in to Open Hours' : screen === 'forgot' ? 'Reset your password' : 'Choose a new password'}</h2>
+        <h2>{screen === 'login' ? 'Sign in to ClinicAI' : screen === 'forgot' ? 'Reset your password' : 'Choose a new password'}</h2>
         <p>{screen === 'login' ? 'Use the prefilled demo account or open Demo Access.' : screen === 'forgot' ? 'We’ll simulate sending a secure reset link.' : 'Enter a new demo password below.'}</p>
         {sent && <div className="success-box">{screen === 'forgot' ? 'Simulated reset link sent. No email was actually delivered.' : 'Password reset successfully. Returning to login…'}</div>}
         {screen !== 'reset' && <Field label="Email address"><input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="you@clinic.com" /></Field>}
@@ -370,18 +370,18 @@ function Auth({ screen, setScreen, onSuccess }: { screen: 'login' | 'forgot' | '
 
 function Shell({ page, go, onNew, children, globalSearch, setGlobalSearch, setSearchOpen, setNotifyOpen, setProfileOpen, hidePageHeading = false }: { page: Page; go: (page: Page) => void; onNew: () => void; children: ReactNode; globalSearch: string; setGlobalSearch: (v: string) => void; setSearchOpen: (v: boolean) => void; setNotifyOpen: (v: boolean) => void; setProfileOpen: (v: boolean) => void; hidePageHeading?: boolean }) {
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
-  const label = page === 'calendar' ? 'Calendar & Bookings' : nav.find((item) => item.page === page)?.label || 'Open Hours'
+  const label = page === 'calendar' ? 'Calendar & Bookings' : nav.find((item) => item.page === page)?.label || 'ClinicAI'
   const navigate = (next: Page) => { go(next); setMobileNavOpen(false) }
   return <div className={`app-shell ${mobileNavOpen ? 'mobile-nav-open' : ''}`}>
     {mobileNavOpen && <button className="sidebar-scrim" aria-label="Close navigation menu" onClick={() => setMobileNavOpen(false)} />}
     <aside className="sidebar" id="primary-navigation">
-      <button className="logo" onClick={() => go('overview')}><span className="logo-mark"><img src="/open-hours-logo.svg" alt="" /></span><span>Open Hours</span></button>
+      <button className="logo" onClick={() => go('overview')}><span className="logo-mark"><img src="/clinicai-logo.svg" alt="" /></span><span>ClinicAI</span></button>
       <nav>{nav.map((item) => <button key={item.page} className={page === item.page ? 'active' : ''} onClick={() => navigate(item.page)}><img src={item.icon} alt="" /><span>{item.label}</span></button>)}</nav>
     </aside>
     <div className="main">
       <header className="topbar">
         <button className="mobile-menu-toggle" type="button" aria-label={mobileNavOpen ? 'Close navigation menu' : 'Open navigation menu'} aria-expanded={mobileNavOpen} aria-controls="primary-navigation" onClick={() => setMobileNavOpen((open) => !open)}><span /><span /><span /></button>
-        <button className="mobile-brand" type="button" onClick={() => navigate('overview')}><img src="/open-hours-logo.svg" alt="" />Open Hours</button>
+        <button className="mobile-brand" type="button" onClick={() => navigate('overview')}><img src="/clinicai-logo.svg" alt="" />ClinicAI</button>
         <div className="global-search"><img src="/assets/e1136.svg" alt="" /><input aria-label="Global search" placeholder="Search patients, appointments or calls…" value={globalSearch} onChange={(e) => { setGlobalSearch(e.target.value); setSearchOpen(true) }} onFocus={() => setSearchOpen(true)} /><kbd>⌘K</kbd></div>
         <div className="today"><span>Today</span><strong>Monday, 19 May 2025</strong></div>
         <Button onClick={onNew}>＋ New Appointment</Button>
@@ -837,7 +837,7 @@ function NotificationList({ read, setRead, go, compact = false }: { read: number
 
 function Settings({ working, doctors, go, toast }: { working: WorkingHours; doctors: Doctor[]; go: (page: Page) => void; toast: (v: string) => void }) {
   const [tab, setTab] = useState<'Clinic profile' | 'Doctor availability' | 'Booking preferences' | 'AI receptionist'>('Clinic profile')
-  const [clinic, setClinic] = useState(() => load('oh-clinic-profile', { name: 'Dr. Sudhir Cardiology Clinic', phone: '(415) 555-0100', email: 'hello@open-hours.example', address: '1200 Market Street, San Francisco, CA' }))
+  const [clinic, setClinic] = useState(() => load('oh-clinic-profile', { name: 'Dr. Sudhir Cardiology Clinic', phone: '(415) 555-0100', email: 'hello@clinicai.example', address: '1200 Market Street, San Francisco, CA' }))
   const [preferences, setPreferences] = useState(() => load('oh-booking-preferences', { confirmation: 'Manual review for AI requests', cancellation: '24 hours' }))
   const [online, setOnline] = useState(() => load('oh-ai-online', true))
   const [selectedDoctorId, setSelectedDoctorId] = useState(doctors[0]?.id || 1)
@@ -872,5 +872,5 @@ function Confirm({ title, body, action, onCancel, onConfirm }: { title: string; 
 }
 function SearchPanel({ query, patients, appointments, go, close }: { query: string; patients: Patient[]; appointments: Appointment[]; go: (p: Page) => void; close: () => void }) {
   const p = patients.filter((x) => x.name.toLowerCase().includes(query.toLowerCase())).slice(0, 3)
-  return <div className="search-panel"><div className="popover-head"><strong>Search Open Hours</strong><button onClick={close}>×</button></div>{!query ? <Empty title="Start typing to search" body="Find demo patients, appointments, and AI calls." /> : <><span className="result-label">PATIENTS</span>{p.map((x) => <button className="search-result" key={x.id} onClick={() => { go('patients'); close() }}><span className="avatar">{x.name[0]}</span><div><strong>{x.name}</strong><small>{x.phone}</small></div><b>›</b></button>)}<span className="result-label">RECORDS</span><button className="search-result" onClick={() => { go('appointments'); close() }}><span className="result-icon">▣</span><div><strong>{appointments.length} appointments</strong><small>Open appointment list</small></div><b>›</b></button><button className="search-result" onClick={() => { go('calls'); close() }}><span className="result-icon">◌</span><div><strong>{calls.length} AI calls</strong><small>Open call history</small></div><b>›</b></button></>}</div>
+  return <div className="search-panel"><div className="popover-head"><strong>Search ClinicAI</strong><button onClick={close}>×</button></div>{!query ? <Empty title="Start typing to search" body="Find demo patients, appointments, and AI calls." /> : <><span className="result-label">PATIENTS</span>{p.map((x) => <button className="search-result" key={x.id} onClick={() => { go('patients'); close() }}><span className="avatar">{x.name[0]}</span><div><strong>{x.name}</strong><small>{x.phone}</small></div><b>›</b></button>)}<span className="result-label">RECORDS</span><button className="search-result" onClick={() => { go('appointments'); close() }}><span className="result-icon">▣</span><div><strong>{appointments.length} appointments</strong><small>Open appointment list</small></div><b>›</b></button><button className="search-result" onClick={() => { go('calls'); close() }}><span className="result-icon">◌</span><div><strong>{calls.length} AI calls</strong><small>Open call history</small></div><b>›</b></button></>}</div>
 }

@@ -816,7 +816,7 @@ dd { margin: 4px 0 0; color: var(--navy); font-family: 'Inter:Semi Bold'; font-s
   .metric-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* Readability pass: preserve the Open Hours layout while keeping compact dashboard type legible. */
+/* Readability pass: preserve the ClinicAI layout while keeping compact dashboard type legible. */
 .dashboard-embedded [data-name='Heading 2'] p { font-size: 18px !important; line-height: 1.25; }
 .dashboard-embedded [data-name='Paragraph'] { min-height: 21px; }
 .dashboard-embedded [data-name='Table Cell'] { padding-block: 3px; }
