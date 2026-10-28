@@ -1062,6 +1062,23 @@ dd { margin: 4px 0 0; color: var(--navy); font-family: 'Inter:Semi Bold'; font-s
   .details-list > div { grid-template-columns: 92px minmax(0,1fr); }
 }
 
+@media (max-width: 680px) {
+  .dashboard-embedded [data-node-id='1:663'] {
+    height: fit-content !important;
+    min-height: 0 !important;
+    align-self: start !important;
+  }
+  .dashboard-embedded [data-node-id='1:853'] {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+  .dashboard-embedded [data-node-id='1:925'] {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+}
+
 /* Responsive application shell and mobile navigation drawer. */
 .mobile-menu-toggle, .mobile-brand, .sidebar-scrim { display: none; }
 .settings-tabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 3px; padding: 5px; border-color: #e3e8f2; background: #f5f7fb; box-shadow: inset 0 1px 2px rgba(25, 43, 82, .035); }
