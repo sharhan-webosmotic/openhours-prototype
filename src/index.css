@@ -1455,8 +1455,10 @@ dd { margin: 4px 0 0; color: var(--navy); font-family: 'Inter:Semi Bold'; font-s
   }
   .dashboard-embedded [data-node-id='1:401'] { width: 100%; min-width: 0; }
   .dashboard-embedded [data-node-id='1:663'] {
-    height: auto !important;
+    height: fit-content !important;
     min-height: 0;
+    max-height: none !important;
+    align-self: start !important;
     overflow: visible !important;
   }
   .dashboard-embedded [data-node-id='1:925'] {
