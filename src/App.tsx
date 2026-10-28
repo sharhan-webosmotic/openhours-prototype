@@ -50,7 +50,6 @@ const nav: { page: Page; label: string; icon: string }[] = [
   { page: 'overview', label: 'Overview', icon: '/assets/d58e7.svg' },
   { page: 'appointments', label: 'Appointments', icon: '/assets/27833.svg' },
   { page: 'patients', label: 'Patients', icon: '/assets/be24d.svg' },
-  { page: 'staff', label: 'Doctors', icon: '/assets/8bbd1.svg' },
   { page: 'services', label: 'Services', icon: '/assets/0cc00.svg' },
   { page: 'calls', label: 'Call History', icon: '/assets/820e1.svg' },
   { page: 'settings', label: 'Clinic Settings', icon: '/assets/5aa53.svg' },
