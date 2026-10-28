@@ -1447,6 +1447,13 @@ dd { margin: 4px 0 0; color: var(--navy); font-family: 'Inter:Semi Bold'; font-s
     align-items: start;
     overflow: visible !important;
   }
+  .dashboard-embedded [data-node-id='1:400'] {
+    grid-column: 1 / -1 !important;
+    grid-row: 2 !important;
+    width: 100%;
+    min-width: 0;
+  }
+  .dashboard-embedded [data-node-id='1:401'] { width: 100%; min-width: 0; }
   .dashboard-embedded [data-node-id='1:136'] { height: auto !important; overflow: visible !important; }
 }
 

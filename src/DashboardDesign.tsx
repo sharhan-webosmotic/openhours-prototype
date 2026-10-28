@@ -740,417 +740,7 @@ export default function ClinicAIDesktopDashboard({ period = "Last 7 days", perio
                   </div>
                 </div>
               </div>
-              <div className="content-stretch flex flex-col items-start pt-[16px] relative shrink-0 w-full" data-node-id="1:400" data-name="Section:margin">
-                <div className="gap-x-[16px] gap-y-[16px] grid grid-cols-[minmax(0,1.27fr)_minmax(460px,1fr)] grid-rows-[_308px] h-[318px] relative shrink-0 w-full" data-node-id="1:401" data-name="Section">
-                  <div className="bg-white border border-[rgba(233,237,245,0.9)] border-solid col-1 content-stretch drop-shadow-[0px_8px_15px_rgba(37,55,103,0.06)] flex flex-col h-[308px] items-start justify-self-stretch px-[20px] py-[19px] relative rounded-[18px] row-1 self-start shrink-0" data-node-id="1:402" data-name="Article">
-                    <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="1:403" data-name="Container">
-                      <div className="content-stretch flex flex-col items-start relative shrink-0 w-[224.766px]" data-node-id="1:404" data-name="Container">
-                        <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1:405" data-name="Heading 2">
-                          <p className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[16px] tracking-[-0.25px] whitespace-nowrap" data-node-id="1:406">
-                            Recent AI Calls
-                          </p>
-                        </div>
-                        <div className="content-stretch flex flex-col h-[21px] items-start pt-[5px] relative shrink-0 w-[224.766px]" data-node-id="1:407" data-name="Paragraph">
-                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:408">
-                            Latest conversations handled by ClinicAI
-                          </p>
-                        </div>
-                      </div>
-                      <div className="content-stretch flex flex-col items-center justify-center relative shrink-0" data-node-id="1:409" data-name="Button">
-                        <p className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] not-italic relative shrink-0 text-[#356ae6] text-[12px] text-center whitespace-nowrap" data-node-id="1:410">
-                          View all →
-                        </p>
-                      </div>
-                    </div>
-                    <div className="content-stretch flex flex-col items-start pt-[13px] relative shrink-0 w-full" data-node-id="1:411" data-name="Table:margin">
-                      <div className="grid grid-cols-[.8fr_1.7fr_1.35fr_1.2fr_.95fr_.75fr] grid-rows-[_____30px_49px_49px_49px_49px] h-[226px] relative shrink-0 w-full" data-node-id="1:412" data-name="Table">
-                        <div className="col-1 content-stretch flex flex-col h-[30px] items-start justify-center p-px relative row-1 shrink-0 w-[70.344px]" data-node-id="1:413" data-name="Header Cell">
-                          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] tracking-[0.4px] uppercase whitespace-nowrap" data-node-id="1:414">
-                            Time
-                          </p>
-                        </div>
-                        <div className="col-2 content-stretch flex flex-col h-[30px] items-start justify-center p-px relative row-1 shrink-0 w-[146.578px]" data-node-id="1:415" data-name="Header Cell">
-                          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] tracking-[0.4px] uppercase whitespace-nowrap" data-node-id="1:416">
-                            Caller
-                          </p>
-                        </div>
-                        <div className="col-3 content-stretch flex flex-col h-[30px] items-start justify-center p-px relative row-1 shrink-0 w-[117.25px]" data-node-id="1:417" data-name="Header Cell">
-                          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] tracking-[0.4px] uppercase whitespace-nowrap" data-node-id="1:418">
-                            Call type
-                          </p>
-                        </div>
-                        <div className="col-4 content-stretch flex flex-col h-[30px] items-start justify-center p-px relative row-1 shrink-0 w-[105.531px]" data-node-id="1:419" data-name="Header Cell">
-                          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] tracking-[0.4px] uppercase whitespace-nowrap" data-node-id="1:420">
-                            Outcome
-                          </p>
-                        </div>
-                        <div className="col-5 content-stretch flex flex-col h-[30px] items-start justify-center p-px relative row-1 shrink-0 w-[82.078px]" data-node-id="1:421" data-name="Header Cell">
-                          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] tracking-[0.4px] uppercase whitespace-nowrap" data-node-id="1:422">
-                            Duration
-                          </p>
-                        </div>
-                        <div className="col-6 content-stretch flex flex-col h-[30px] items-start justify-center p-px relative row-1 shrink-0 w-[64.531px]" data-node-id="1:423" data-name="Header Cell">
-                          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] tracking-[0.4px] uppercase whitespace-nowrap" data-node-id="1:424">
-                            Action
-                          </p>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-1 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-2 shrink-0 w-[70.344px]" data-node-id="1:425" data-name="Table Cell">
-                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[68.344px]" data-node-id="1:426" data-name="Bold Text">
-                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:427">
-                              9:42 AM
-                            </p>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-2 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-2 shrink-0 w-[146.578px]" data-node-id="1:428" data-name="Table Cell">
-                          <div className="content-stretch flex gap-[7px] items-center relative shrink-0 w-[144.578px]" data-node-id="1:429" data-name="Container">
-                            <div className="bg-[#eef2fb] grid grid-cols-[_25px] grid-rows-[_25px] relative rounded-[8px] shrink-0 size-[25px]" data-node-id="1:430" data-name="Text">
-                              <p className="[word-break:break-word] col-1 font-['Inter:Bold'] font-bold justify-self-center leading-[normal] not-italic relative row-1 self-center shrink-0 text-[#5d6c8b] text-[12px] whitespace-nowrap" data-node-id="1:431">
-                                LM
-                              </p>
-                            </div>
-                            <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="1:432" data-name="Bold Text">
-                              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:433">
-                                Laura Miller
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-3 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-2 shrink-0 w-[117.25px]" data-node-id="1:434" data-name="Table Cell">
-                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:435">
-                            New patient
-                          </p>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-4 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-2 shrink-0 w-[105.531px]" data-node-id="1:436" data-name="Table Cell">
-                          <div className="bg-[#e7f8f2] content-stretch flex h-[22px] items-center px-[8px] relative rounded-[999px] shrink-0" data-node-id="1:437" data-name="Text">
-                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#128461] text-[12px] whitespace-nowrap" data-node-id="1:438">
-                              Booked
-                            </p>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-5 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-2 shrink-0 w-[82.078px]" data-node-id="1:439" data-name="Table Cell">
-                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:440">
-                            4m 18s
-                          </p>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-6 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-2 shrink-0 w-[64.531px]" data-node-id="1:441" data-name="Table Cell">
-                          <div className="bg-[#f5f7fb] grid grid-cols-[_18px] grid-rows-[_25px] px-[6px] py-px relative rounded-[8px] shrink-0 size-[27px]" data-node-id="1:442" data-name="Button - Play call recording">
-                            <div className="col-1 justify-self-center overflow-clip relative row-1 self-center shrink-0 size-[18px]" data-node-id="1:443" data-name="Icon">
-                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon24} />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-1 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-3 shrink-0 w-[70.344px]" data-node-id="1:447" data-name="Table Cell">
-                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[68.344px]" data-node-id="1:448" data-name="Bold Text">
-                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:449">
-                              9:18 AM
-                            </p>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-2 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-3 shrink-0 w-[146.578px]" data-node-id="1:450" data-name="Table Cell">
-                          <div className="content-stretch flex gap-[7px] items-center relative shrink-0 w-[144.578px]" data-node-id="1:451" data-name="Container">
-                            <div className="bg-[#eef2fb] grid grid-cols-[_25px] grid-rows-[_25px] relative rounded-[8px] shrink-0 size-[25px]" data-node-id="1:452" data-name="Text">
-                              <p className="[word-break:break-word] col-1 font-['Inter:Bold'] font-bold justify-self-center leading-[normal] not-italic relative row-1 self-center shrink-0 text-[#5d6c8b] text-[12px] whitespace-nowrap" data-node-id="1:453">
-                                RP
-                              </p>
-                            </div>
-                            <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="1:454" data-name="Bold Text">
-                              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:455">
-                                Robert Patel
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-3 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-3 shrink-0 w-[117.25px]" data-node-id="1:456" data-name="Table Cell">
-                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:457">
-                            Reschedule
-                          </p>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-4 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-3 shrink-0 w-[105.531px]" data-node-id="1:458" data-name="Table Cell">
-                          <div className="bg-[#eaf1ff] content-stretch flex h-[22px] items-center px-[8px] relative rounded-[999px] shrink-0" data-node-id="1:459" data-name="Text">
-                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#356ae6] text-[12px] whitespace-nowrap" data-node-id="1:460">
-                              Updated
-                            </p>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-5 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-3 shrink-0 w-[82.078px]" data-node-id="1:461" data-name="Table Cell">
-                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:462">
-                            2m 46s
-                          </p>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-6 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-3 shrink-0 w-[64.531px]" data-node-id="1:463" data-name="Table Cell">
-                          <div className="bg-[#f5f7fb] grid grid-cols-[_18px] grid-rows-[_25px] px-[6px] py-px relative rounded-[8px] shrink-0 size-[27px]" data-node-id="1:464" data-name="Button - Play call recording">
-                            <div className="col-1 justify-self-center overflow-clip relative row-1 self-center shrink-0 size-[18px]" data-node-id="1:465" data-name="Icon">
-                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon24} />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-1 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-4 shrink-0 w-[70.344px]" data-node-id="1:469" data-name="Table Cell">
-                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[68.344px]" data-node-id="1:470" data-name="Bold Text">
-                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:471">
-                              8:54 AM
-                            </p>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-2 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-4 shrink-0 w-[146.578px]" data-node-id="1:472" data-name="Table Cell">
-                          <div className="content-stretch flex gap-[7px] items-center relative shrink-0 w-[144.578px]" data-node-id="1:473" data-name="Container">
-                            <div className="bg-[#eef2fb] grid grid-cols-[_25px] grid-rows-[_25px] relative rounded-[8px] shrink-0 size-[25px]" data-node-id="1:474" data-name="Text">
-                              <p className="[word-break:break-word] col-1 font-['Inter:Bold'] font-bold justify-self-center leading-[normal] not-italic relative row-1 self-center shrink-0 text-[#5d6c8b] text-[12px] whitespace-nowrap" data-node-id="1:475">
-                                EW
-                              </p>
-                            </div>
-                            <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="1:476" data-name="Bold Text">
-                              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:477">
-                                Emma Wilson
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-3 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-4 shrink-0 w-[117.25px]" data-node-id="1:478" data-name="Table Cell">
-                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:479">
-                            General enquiry
-                          </p>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-4 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-4 shrink-0 w-[105.531px]" data-node-id="1:480" data-name="Table Cell">
-                          <div className="bg-[#eef1f6] content-stretch flex h-[22px] items-center px-[8px] relative rounded-[999px] shrink-0" data-node-id="1:481" data-name="Text">
-                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#67738b] text-[12px] whitespace-nowrap" data-node-id="1:482">
-                              Resolved
-                            </p>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-5 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-4 shrink-0 w-[82.078px]" data-node-id="1:483" data-name="Table Cell">
-                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:484">
-                            3m 08s
-                          </p>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-6 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-4 shrink-0 w-[64.531px]" data-node-id="1:485" data-name="Table Cell">
-                          <div className="bg-[#f5f7fb] grid grid-cols-[_18px] grid-rows-[_25px] px-[6px] py-px relative rounded-[8px] shrink-0 size-[27px]" data-node-id="1:486" data-name="Button - Play call recording">
-                            <div className="col-1 justify-self-center overflow-clip relative row-1 self-center shrink-0 size-[18px]" data-node-id="1:487" data-name="Icon">
-                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon24} />
-                            </div>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-1 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-5 shrink-0 w-[70.344px]" data-node-id="1:491" data-name="Table Cell">
-                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[68.344px]" data-node-id="1:492" data-name="Bold Text">
-                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:493">
-                              8:21 AM
-                            </p>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-2 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-5 shrink-0 w-[146.578px]" data-node-id="1:494" data-name="Table Cell">
-                          <div className="content-stretch flex gap-[7px] items-center relative shrink-0 w-[144.578px]" data-node-id="1:495" data-name="Container">
-                            <div className="bg-[#eef2fb] grid grid-cols-[_25px] grid-rows-[_25px] relative rounded-[8px] shrink-0 size-[25px]" data-node-id="1:496" data-name="Text">
-                              <p className="[word-break:break-word] col-1 font-['Inter:Bold'] font-bold justify-self-center leading-[normal] not-italic relative row-1 self-center shrink-0 text-[#5d6c8b] text-[12px] whitespace-nowrap" data-node-id="1:497">
-                                JB
-                              </p>
-                            </div>
-                            <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="1:498" data-name="Bold Text">
-                              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:499">
-                                James Brown
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-3 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-5 shrink-0 w-[117.25px]" data-node-id="1:500" data-name="Table Cell">
-                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:501">
-                            Cancellation
-                          </p>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-4 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-5 shrink-0 w-[105.531px]" data-node-id="1:502" data-name="Table Cell">
-                          <div className="bg-[#fff5e8] content-stretch flex h-[22px] items-center px-[8px] relative rounded-[999px] shrink-0" data-node-id="1:503" data-name="Text">
-                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#bd7218] text-[12px] whitespace-nowrap" data-node-id="1:504">
-                              Follow-up
-                            </p>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-5 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-5 shrink-0 w-[82.078px]" data-node-id="1:505" data-name="Table Cell">
-                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:506">
-                            1m 52s
-                          </p>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-6 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-5 shrink-0 w-[64.531px]" data-node-id="1:507" data-name="Table Cell">
-                          <div className="bg-[#f5f7fb] grid grid-cols-[_18px] grid-rows-[_25px] px-[6px] py-px relative rounded-[8px] shrink-0 size-[27px]" data-node-id="1:508" data-name="Button - Play call recording">
-                            <div className="col-1 justify-self-center overflow-clip relative row-1 self-center shrink-0 size-[18px]" data-node-id="1:509" data-name="Icon">
-                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon24} />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="bg-white border border-[rgba(233,237,245,0.9)] border-solid col-2 content-stretch drop-shadow-[0px_8px_15px_rgba(37,55,103,0.06)] flex flex-col h-[308px] items-start justify-self-stretch pb-[10px] pt-[19px] px-[20px] relative rounded-[18px] row-1 self-start shrink-0" data-node-id="1:513" data-name="Article">
-                    <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="1:514" data-name="Container">
-                      <div className="content-stretch flex flex-col items-start relative shrink-0 w-[189.453px]" data-node-id="1:515" data-name="Container">
-                        <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1:516" data-name="Heading 2">
-                          <p className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[16px] tracking-[-0.25px] whitespace-nowrap" data-node-id="1:517">
-                            Upcoming Appointments
-                          </p>
-                        </div>
-                        <div className="content-stretch flex flex-col h-[21px] items-start pt-[5px] relative shrink-0 w-[189.453px]" data-node-id="1:518" data-name="Paragraph">
-                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:519">
-                            Next confirmed and pending visits
-                          </p>
-                        </div>
-                      </div>
-                      <div className="content-stretch flex flex-col items-center justify-center relative shrink-0" data-node-id="1:520" data-name="Button">
-                        <p className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] not-italic relative shrink-0 text-[#356ae6] text-[12px] text-center whitespace-nowrap" data-node-id="1:521">
-                          View all →
-                        </p>
-                      </div>
-                    </div>
-                    <div className="content-stretch flex flex-col items-start pt-[13px] relative shrink-0 w-full" data-node-id="1:522" data-name="Table:margin">
-                      <div className="grid grid-cols-[1.4fr_1.2fr_1fr_1fr_.95fr] grid-rows-[_____30px_49px_49px_49px_49px] h-[226px] relative shrink-0 w-full" data-node-id="1:523" data-name="Table">
-                        <div className="col-1 content-stretch flex flex-col h-[30px] items-start justify-center p-px relative row-1 shrink-0 w-[112.922px]" data-node-id="1:524" data-name="Header Cell">
-                          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] tracking-[0.4px] uppercase whitespace-nowrap" data-node-id="1:525">{`Date & Time`}</p>
-                        </div>
-                        <div className="col-2 content-stretch flex flex-col h-[30px] items-start justify-center p-px relative row-1 shrink-0 w-[99.359px]" data-node-id="1:526" data-name="Header Cell">
-                          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] tracking-[0.4px] uppercase whitespace-nowrap" data-node-id="1:527">
-                            Patient
-                          </p>
-                        </div>
-                        <div className="col-3 content-stretch flex flex-col h-[30px] items-start justify-center p-px relative row-1 shrink-0 w-[81.297px]" data-node-id="1:528" data-name="Header Cell">
-                          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] tracking-[0.4px] uppercase whitespace-nowrap" data-node-id="1:529">
-                            Doctor
-                          </p>
-                        </div>
-                        <div className="col-4 content-stretch flex flex-col h-[30px] items-start justify-center p-px relative row-1 shrink-0 w-[81.297px]" data-node-id="1:530" data-name="Header Cell">
-                          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] tracking-[0.4px] uppercase whitespace-nowrap" data-node-id="1:531">
-                            Service
-                          </p>
-                        </div>
-                        <div className="col-5 content-stretch flex flex-col h-[30px] items-start justify-center p-px relative row-1 shrink-0 w-[76.813px]" data-node-id="1:532" data-name="Header Cell">
-                          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] tracking-[0.4px] uppercase whitespace-nowrap" data-node-id="1:533">
-                            Status
-                          </p>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-1 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-2 shrink-0 w-[112.922px]" data-node-id="1:534" data-name="Table Cell">
-                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[110.922px]" data-node-id="1:535" data-name="Bold Text">
-                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:536">
-                              May 19 · 10:30
-                            </p>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-2 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-2 shrink-0 w-[99.359px]" data-node-id="1:537" data-name="Table Cell">
-                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[97.359px]" data-node-id="1:538" data-name="Bold Text">
-                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:539">
-                              Laura Miller
-                            </p>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-3 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-2 shrink-0 w-[81.297px]" data-node-id="1:540" data-name="Table Cell">
-                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:541">
-                            Dr. Sudhir
-                          </p>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-4 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-2 shrink-0 w-[81.297px]" data-node-id="1:542" data-name="Table Cell">
-                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:543">
-                            Cardiology consultation
-                          </p>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-5 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-2 shrink-0 w-[76.813px]" data-node-id="1:544" data-name="Table Cell">
-                          <div className="bg-[#eaf1ff] content-stretch flex h-[22px] items-center px-[8px] relative rounded-[999px] shrink-0" data-node-id="1:545" data-name="Text">
-                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#356ae6] text-[12px] whitespace-nowrap" data-node-id="1:546">
-                              AI Booking
-                            </p>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-1 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-3 shrink-0 w-[112.922px]" data-node-id="1:547" data-name="Table Cell">
-                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[110.922px]" data-node-id="1:548" data-name="Bold Text">
-                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:549">
-                              May 19 · 11:15
-                            </p>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-2 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-3 shrink-0 w-[99.359px]" data-node-id="1:550" data-name="Table Cell">
-                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[97.359px]" data-node-id="1:551" data-name="Bold Text">
-                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:552">
-                              Noah Johnson
-                            </p>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-3 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-3 shrink-0 w-[81.297px]" data-node-id="1:553" data-name="Table Cell">
-                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:554">
-                            Dr. Sudhir
-                          </p>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-4 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-3 shrink-0 w-[81.297px]" data-node-id="1:555" data-name="Table Cell">
-                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:556">
-                            Cardiology follow-up
-                          </p>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-5 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-3 shrink-0 w-[76.813px]" data-node-id="1:557" data-name="Table Cell">
-                          <div className="bg-[#e7f8f2] content-stretch flex h-[22px] items-center px-[8px] relative rounded-[999px] shrink-0" data-node-id="1:558" data-name="Text">
-                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#128461] text-[12px] whitespace-nowrap" data-node-id="1:559">
-                              Confirmed
-                            </p>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-1 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-4 shrink-0 w-[112.922px]" data-node-id="1:560" data-name="Table Cell">
-                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[110.922px]" data-node-id="1:561" data-name="Bold Text">
-                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:562">
-                              May 19 · 2:00
-                            </p>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-2 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-4 shrink-0 w-[99.359px]" data-node-id="1:563" data-name="Table Cell">
-                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[97.359px]" data-node-id="1:564" data-name="Bold Text">
-                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:565">
-                              Sophia Davis
-                            </p>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-3 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-4 shrink-0 w-[81.297px]" data-node-id="1:566" data-name="Table Cell">
-                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:567">
-                            Dr. Sudhir
-                          </p>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-4 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-4 shrink-0 w-[81.297px]" data-node-id="1:568" data-name="Table Cell">
-                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:569">
-                            ECG review
-                          </p>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-5 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-4 shrink-0 w-[76.813px]" data-node-id="1:570" data-name="Table Cell">
-                          <div className="bg-[#fff5e8] content-stretch flex h-[22px] items-center px-[8px] relative rounded-[999px] shrink-0" data-node-id="1:571" data-name="Text">
-                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#bd7218] text-[12px] whitespace-nowrap" data-node-id="1:572">
-                              Pending
-                            </p>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-1 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-5 shrink-0 w-[112.922px]" data-node-id="1:573" data-name="Table Cell">
-                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[110.922px]" data-node-id="1:574" data-name="Bold Text">
-                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:575">
-                              May 20 · 9:00
-                            </p>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-2 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-5 shrink-0 w-[99.359px]" data-node-id="1:576" data-name="Table Cell">
-                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[97.359px]" data-node-id="1:577" data-name="Bold Text">
-                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:578">
-                              Mason Clark
-                            </p>
-                          </div>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-3 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-5 shrink-0 w-[81.297px]" data-node-id="1:579" data-name="Table Cell">
-                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:580">
-                            Dr. Sudhir
-                          </p>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-4 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-5 shrink-0 w-[81.297px]" data-node-id="1:581" data-name="Table Cell">
-                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:582">
-                            Cardiology consultation
-                          </p>
-                        </div>
-                        <div className="border-[#e9edf5] border-solid border-t col-5 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-5 shrink-0 w-[76.813px]" data-node-id="1:583" data-name="Table Cell">
-                          <div className="bg-[#e7f8f2] content-stretch flex h-[22px] items-center px-[8px] relative rounded-[999px] shrink-0" data-node-id="1:584" data-name="Text">
-                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#128461] text-[12px] whitespace-nowrap" data-node-id="1:585">
-                              Confirmed
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
             <div className="bg-white border border-[rgba(233,237,245,0.9)] border-solid col-2 content-stretch flex flex-col h-[960px] items-start justify-self-stretch overflow-clip p-[20px] relative rounded-[18px] row-1 shadow-[0px_8px_30px_0px_rgba(37,55,103,0.06)] shrink-0" data-node-id="1:663" data-name="Sidebar - Calendar and bookings">
               <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="1:664" data-name="Container">
@@ -1697,6 +1287,417 @@ export default function ClinicAIDesktopDashboard({ period = "Last 7 days", perio
                 </div>
               </div>
             </div>
+            <div className="content-stretch flex flex-col items-start pt-[16px] relative shrink-0 w-full" data-node-id="1:400" data-name="Section:margin">
+                <div className="gap-x-[16px] gap-y-[16px] grid grid-cols-[minmax(0,1.27fr)_minmax(460px,1fr)] grid-rows-[_308px] h-[318px] relative shrink-0 w-full" data-node-id="1:401" data-name="Section">
+                  <div className="bg-white border border-[rgba(233,237,245,0.9)] border-solid col-1 content-stretch drop-shadow-[0px_8px_15px_rgba(37,55,103,0.06)] flex flex-col h-[308px] items-start justify-self-stretch px-[20px] py-[19px] relative rounded-[18px] row-1 self-start shrink-0" data-node-id="1:402" data-name="Article">
+                    <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="1:403" data-name="Container">
+                      <div className="content-stretch flex flex-col items-start relative shrink-0 w-[224.766px]" data-node-id="1:404" data-name="Container">
+                        <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1:405" data-name="Heading 2">
+                          <p className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[16px] tracking-[-0.25px] whitespace-nowrap" data-node-id="1:406">
+                            Recent AI Calls
+                          </p>
+                        </div>
+                        <div className="content-stretch flex flex-col h-[21px] items-start pt-[5px] relative shrink-0 w-[224.766px]" data-node-id="1:407" data-name="Paragraph">
+                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:408">
+                            Latest conversations handled by ClinicAI
+                          </p>
+                        </div>
+                      </div>
+                      <div className="content-stretch flex flex-col items-center justify-center relative shrink-0" data-node-id="1:409" data-name="Button">
+                        <p className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] not-italic relative shrink-0 text-[#356ae6] text-[12px] text-center whitespace-nowrap" data-node-id="1:410">
+                          View all →
+                        </p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col items-start pt-[13px] relative shrink-0 w-full" data-node-id="1:411" data-name="Table:margin">
+                      <div className="grid grid-cols-[.8fr_1.7fr_1.35fr_1.2fr_.95fr_.75fr] grid-rows-[_____30px_49px_49px_49px_49px] h-[226px] relative shrink-0 w-full" data-node-id="1:412" data-name="Table">
+                        <div className="col-1 content-stretch flex flex-col h-[30px] items-start justify-center p-px relative row-1 shrink-0 w-[70.344px]" data-node-id="1:413" data-name="Header Cell">
+                          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] tracking-[0.4px] uppercase whitespace-nowrap" data-node-id="1:414">
+                            Time
+                          </p>
+                        </div>
+                        <div className="col-2 content-stretch flex flex-col h-[30px] items-start justify-center p-px relative row-1 shrink-0 w-[146.578px]" data-node-id="1:415" data-name="Header Cell">
+                          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] tracking-[0.4px] uppercase whitespace-nowrap" data-node-id="1:416">
+                            Caller
+                          </p>
+                        </div>
+                        <div className="col-3 content-stretch flex flex-col h-[30px] items-start justify-center p-px relative row-1 shrink-0 w-[117.25px]" data-node-id="1:417" data-name="Header Cell">
+                          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] tracking-[0.4px] uppercase whitespace-nowrap" data-node-id="1:418">
+                            Call type
+                          </p>
+                        </div>
+                        <div className="col-4 content-stretch flex flex-col h-[30px] items-start justify-center p-px relative row-1 shrink-0 w-[105.531px]" data-node-id="1:419" data-name="Header Cell">
+                          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] tracking-[0.4px] uppercase whitespace-nowrap" data-node-id="1:420">
+                            Outcome
+                          </p>
+                        </div>
+                        <div className="col-5 content-stretch flex flex-col h-[30px] items-start justify-center p-px relative row-1 shrink-0 w-[82.078px]" data-node-id="1:421" data-name="Header Cell">
+                          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] tracking-[0.4px] uppercase whitespace-nowrap" data-node-id="1:422">
+                            Duration
+                          </p>
+                        </div>
+                        <div className="col-6 content-stretch flex flex-col h-[30px] items-start justify-center p-px relative row-1 shrink-0 w-[64.531px]" data-node-id="1:423" data-name="Header Cell">
+                          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] tracking-[0.4px] uppercase whitespace-nowrap" data-node-id="1:424">
+                            Action
+                          </p>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-1 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-2 shrink-0 w-[70.344px]" data-node-id="1:425" data-name="Table Cell">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[68.344px]" data-node-id="1:426" data-name="Bold Text">
+                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:427">
+                              9:42 AM
+                            </p>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-2 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-2 shrink-0 w-[146.578px]" data-node-id="1:428" data-name="Table Cell">
+                          <div className="content-stretch flex gap-[7px] items-center relative shrink-0 w-[144.578px]" data-node-id="1:429" data-name="Container">
+                            <div className="bg-[#eef2fb] grid grid-cols-[_25px] grid-rows-[_25px] relative rounded-[8px] shrink-0 size-[25px]" data-node-id="1:430" data-name="Text">
+                              <p className="[word-break:break-word] col-1 font-['Inter:Bold'] font-bold justify-self-center leading-[normal] not-italic relative row-1 self-center shrink-0 text-[#5d6c8b] text-[12px] whitespace-nowrap" data-node-id="1:431">
+                                LM
+                              </p>
+                            </div>
+                            <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="1:432" data-name="Bold Text">
+                              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:433">
+                                Laura Miller
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-3 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-2 shrink-0 w-[117.25px]" data-node-id="1:434" data-name="Table Cell">
+                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:435">
+                            New patient
+                          </p>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-4 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-2 shrink-0 w-[105.531px]" data-node-id="1:436" data-name="Table Cell">
+                          <div className="bg-[#e7f8f2] content-stretch flex h-[22px] items-center px-[8px] relative rounded-[999px] shrink-0" data-node-id="1:437" data-name="Text">
+                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#128461] text-[12px] whitespace-nowrap" data-node-id="1:438">
+                              Booked
+                            </p>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-5 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-2 shrink-0 w-[82.078px]" data-node-id="1:439" data-name="Table Cell">
+                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:440">
+                            4m 18s
+                          </p>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-6 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-2 shrink-0 w-[64.531px]" data-node-id="1:441" data-name="Table Cell">
+                          <div className="bg-[#f5f7fb] grid grid-cols-[_18px] grid-rows-[_25px] px-[6px] py-px relative rounded-[8px] shrink-0 size-[27px]" data-node-id="1:442" data-name="Button - Play call recording">
+                            <div className="col-1 justify-self-center overflow-clip relative row-1 self-center shrink-0 size-[18px]" data-node-id="1:443" data-name="Icon">
+                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon24} />
+                            </div>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-1 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-3 shrink-0 w-[70.344px]" data-node-id="1:447" data-name="Table Cell">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[68.344px]" data-node-id="1:448" data-name="Bold Text">
+                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:449">
+                              9:18 AM
+                            </p>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-2 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-3 shrink-0 w-[146.578px]" data-node-id="1:450" data-name="Table Cell">
+                          <div className="content-stretch flex gap-[7px] items-center relative shrink-0 w-[144.578px]" data-node-id="1:451" data-name="Container">
+                            <div className="bg-[#eef2fb] grid grid-cols-[_25px] grid-rows-[_25px] relative rounded-[8px] shrink-0 size-[25px]" data-node-id="1:452" data-name="Text">
+                              <p className="[word-break:break-word] col-1 font-['Inter:Bold'] font-bold justify-self-center leading-[normal] not-italic relative row-1 self-center shrink-0 text-[#5d6c8b] text-[12px] whitespace-nowrap" data-node-id="1:453">
+                                RP
+                              </p>
+                            </div>
+                            <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="1:454" data-name="Bold Text">
+                              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:455">
+                                Robert Patel
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-3 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-3 shrink-0 w-[117.25px]" data-node-id="1:456" data-name="Table Cell">
+                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:457">
+                            Reschedule
+                          </p>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-4 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-3 shrink-0 w-[105.531px]" data-node-id="1:458" data-name="Table Cell">
+                          <div className="bg-[#eaf1ff] content-stretch flex h-[22px] items-center px-[8px] relative rounded-[999px] shrink-0" data-node-id="1:459" data-name="Text">
+                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#356ae6] text-[12px] whitespace-nowrap" data-node-id="1:460">
+                              Updated
+                            </p>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-5 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-3 shrink-0 w-[82.078px]" data-node-id="1:461" data-name="Table Cell">
+                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:462">
+                            2m 46s
+                          </p>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-6 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-3 shrink-0 w-[64.531px]" data-node-id="1:463" data-name="Table Cell">
+                          <div className="bg-[#f5f7fb] grid grid-cols-[_18px] grid-rows-[_25px] px-[6px] py-px relative rounded-[8px] shrink-0 size-[27px]" data-node-id="1:464" data-name="Button - Play call recording">
+                            <div className="col-1 justify-self-center overflow-clip relative row-1 self-center shrink-0 size-[18px]" data-node-id="1:465" data-name="Icon">
+                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon24} />
+                            </div>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-1 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-4 shrink-0 w-[70.344px]" data-node-id="1:469" data-name="Table Cell">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[68.344px]" data-node-id="1:470" data-name="Bold Text">
+                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:471">
+                              8:54 AM
+                            </p>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-2 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-4 shrink-0 w-[146.578px]" data-node-id="1:472" data-name="Table Cell">
+                          <div className="content-stretch flex gap-[7px] items-center relative shrink-0 w-[144.578px]" data-node-id="1:473" data-name="Container">
+                            <div className="bg-[#eef2fb] grid grid-cols-[_25px] grid-rows-[_25px] relative rounded-[8px] shrink-0 size-[25px]" data-node-id="1:474" data-name="Text">
+                              <p className="[word-break:break-word] col-1 font-['Inter:Bold'] font-bold justify-self-center leading-[normal] not-italic relative row-1 self-center shrink-0 text-[#5d6c8b] text-[12px] whitespace-nowrap" data-node-id="1:475">
+                                EW
+                              </p>
+                            </div>
+                            <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="1:476" data-name="Bold Text">
+                              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:477">
+                                Emma Wilson
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-3 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-4 shrink-0 w-[117.25px]" data-node-id="1:478" data-name="Table Cell">
+                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:479">
+                            General enquiry
+                          </p>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-4 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-4 shrink-0 w-[105.531px]" data-node-id="1:480" data-name="Table Cell">
+                          <div className="bg-[#eef1f6] content-stretch flex h-[22px] items-center px-[8px] relative rounded-[999px] shrink-0" data-node-id="1:481" data-name="Text">
+                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#67738b] text-[12px] whitespace-nowrap" data-node-id="1:482">
+                              Resolved
+                            </p>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-5 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-4 shrink-0 w-[82.078px]" data-node-id="1:483" data-name="Table Cell">
+                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:484">
+                            3m 08s
+                          </p>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-6 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-4 shrink-0 w-[64.531px]" data-node-id="1:485" data-name="Table Cell">
+                          <div className="bg-[#f5f7fb] grid grid-cols-[_18px] grid-rows-[_25px] px-[6px] py-px relative rounded-[8px] shrink-0 size-[27px]" data-node-id="1:486" data-name="Button - Play call recording">
+                            <div className="col-1 justify-self-center overflow-clip relative row-1 self-center shrink-0 size-[18px]" data-node-id="1:487" data-name="Icon">
+                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon24} />
+                            </div>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-1 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-5 shrink-0 w-[70.344px]" data-node-id="1:491" data-name="Table Cell">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[68.344px]" data-node-id="1:492" data-name="Bold Text">
+                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:493">
+                              8:21 AM
+                            </p>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-2 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-5 shrink-0 w-[146.578px]" data-node-id="1:494" data-name="Table Cell">
+                          <div className="content-stretch flex gap-[7px] items-center relative shrink-0 w-[144.578px]" data-node-id="1:495" data-name="Container">
+                            <div className="bg-[#eef2fb] grid grid-cols-[_25px] grid-rows-[_25px] relative rounded-[8px] shrink-0 size-[25px]" data-node-id="1:496" data-name="Text">
+                              <p className="[word-break:break-word] col-1 font-['Inter:Bold'] font-bold justify-self-center leading-[normal] not-italic relative row-1 self-center shrink-0 text-[#5d6c8b] text-[12px] whitespace-nowrap" data-node-id="1:497">
+                                JB
+                              </p>
+                            </div>
+                            <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="1:498" data-name="Bold Text">
+                              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:499">
+                                James Brown
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-3 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-5 shrink-0 w-[117.25px]" data-node-id="1:500" data-name="Table Cell">
+                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:501">
+                            Cancellation
+                          </p>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-4 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-5 shrink-0 w-[105.531px]" data-node-id="1:502" data-name="Table Cell">
+                          <div className="bg-[#fff5e8] content-stretch flex h-[22px] items-center px-[8px] relative rounded-[999px] shrink-0" data-node-id="1:503" data-name="Text">
+                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#bd7218] text-[12px] whitespace-nowrap" data-node-id="1:504">
+                              Follow-up
+                            </p>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-5 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-5 shrink-0 w-[82.078px]" data-node-id="1:505" data-name="Table Cell">
+                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:506">
+                            1m 52s
+                          </p>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-6 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-5 shrink-0 w-[64.531px]" data-node-id="1:507" data-name="Table Cell">
+                          <div className="bg-[#f5f7fb] grid grid-cols-[_18px] grid-rows-[_25px] px-[6px] py-px relative rounded-[8px] shrink-0 size-[27px]" data-node-id="1:508" data-name="Button - Play call recording">
+                            <div className="col-1 justify-self-center overflow-clip relative row-1 self-center shrink-0 size-[18px]" data-node-id="1:509" data-name="Icon">
+                              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIcon24} />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-white border border-[rgba(233,237,245,0.9)] border-solid col-2 content-stretch drop-shadow-[0px_8px_15px_rgba(37,55,103,0.06)] flex flex-col h-[308px] items-start justify-self-stretch pb-[10px] pt-[19px] px-[20px] relative rounded-[18px] row-1 self-start shrink-0" data-node-id="1:513" data-name="Article">
+                    <div className="content-stretch flex items-start justify-between relative shrink-0 w-full" data-node-id="1:514" data-name="Container">
+                      <div className="content-stretch flex flex-col items-start relative shrink-0 w-[189.453px]" data-node-id="1:515" data-name="Container">
+                        <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1:516" data-name="Heading 2">
+                          <p className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[16px] tracking-[-0.25px] whitespace-nowrap" data-node-id="1:517">
+                            Upcoming Appointments
+                          </p>
+                        </div>
+                        <div className="content-stretch flex flex-col h-[21px] items-start pt-[5px] relative shrink-0 w-[189.453px]" data-node-id="1:518" data-name="Paragraph">
+                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:519">
+                            Next confirmed and pending visits
+                          </p>
+                        </div>
+                      </div>
+                      <div className="content-stretch flex flex-col items-center justify-center relative shrink-0" data-node-id="1:520" data-name="Button">
+                        <p className="[word-break:break-word] font-['Inter:Bold'] font-bold leading-[normal] not-italic relative shrink-0 text-[#356ae6] text-[12px] text-center whitespace-nowrap" data-node-id="1:521">
+                          View all →
+                        </p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col items-start pt-[13px] relative shrink-0 w-full" data-node-id="1:522" data-name="Table:margin">
+                      <div className="grid grid-cols-[1.4fr_1.2fr_1fr_1fr_.95fr] grid-rows-[_____30px_49px_49px_49px_49px] h-[226px] relative shrink-0 w-full" data-node-id="1:523" data-name="Table">
+                        <div className="col-1 content-stretch flex flex-col h-[30px] items-start justify-center p-px relative row-1 shrink-0 w-[112.922px]" data-node-id="1:524" data-name="Header Cell">
+                          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] tracking-[0.4px] uppercase whitespace-nowrap" data-node-id="1:525">{`Date & Time`}</p>
+                        </div>
+                        <div className="col-2 content-stretch flex flex-col h-[30px] items-start justify-center p-px relative row-1 shrink-0 w-[99.359px]" data-node-id="1:526" data-name="Header Cell">
+                          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] tracking-[0.4px] uppercase whitespace-nowrap" data-node-id="1:527">
+                            Patient
+                          </p>
+                        </div>
+                        <div className="col-3 content-stretch flex flex-col h-[30px] items-start justify-center p-px relative row-1 shrink-0 w-[81.297px]" data-node-id="1:528" data-name="Header Cell">
+                          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] tracking-[0.4px] uppercase whitespace-nowrap" data-node-id="1:529">
+                            Doctor
+                          </p>
+                        </div>
+                        <div className="col-4 content-stretch flex flex-col h-[30px] items-start justify-center p-px relative row-1 shrink-0 w-[81.297px]" data-node-id="1:530" data-name="Header Cell">
+                          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] tracking-[0.4px] uppercase whitespace-nowrap" data-node-id="1:531">
+                            Service
+                          </p>
+                        </div>
+                        <div className="col-5 content-stretch flex flex-col h-[30px] items-start justify-center p-px relative row-1 shrink-0 w-[76.813px]" data-node-id="1:532" data-name="Header Cell">
+                          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] tracking-[0.4px] uppercase whitespace-nowrap" data-node-id="1:533">
+                            Status
+                          </p>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-1 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-2 shrink-0 w-[112.922px]" data-node-id="1:534" data-name="Table Cell">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[110.922px]" data-node-id="1:535" data-name="Bold Text">
+                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:536">
+                              May 19 · 10:30
+                            </p>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-2 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-2 shrink-0 w-[99.359px]" data-node-id="1:537" data-name="Table Cell">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[97.359px]" data-node-id="1:538" data-name="Bold Text">
+                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:539">
+                              Laura Miller
+                            </p>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-3 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-2 shrink-0 w-[81.297px]" data-node-id="1:540" data-name="Table Cell">
+                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:541">
+                            Dr. Sudhir
+                          </p>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-4 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-2 shrink-0 w-[81.297px]" data-node-id="1:542" data-name="Table Cell">
+                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:543">
+                            Cardiology consultation
+                          </p>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-5 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-2 shrink-0 w-[76.813px]" data-node-id="1:544" data-name="Table Cell">
+                          <div className="bg-[#eaf1ff] content-stretch flex h-[22px] items-center px-[8px] relative rounded-[999px] shrink-0" data-node-id="1:545" data-name="Text">
+                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#356ae6] text-[12px] whitespace-nowrap" data-node-id="1:546">
+                              AI Booking
+                            </p>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-1 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-3 shrink-0 w-[112.922px]" data-node-id="1:547" data-name="Table Cell">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[110.922px]" data-node-id="1:548" data-name="Bold Text">
+                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:549">
+                              May 19 · 11:15
+                            </p>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-2 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-3 shrink-0 w-[99.359px]" data-node-id="1:550" data-name="Table Cell">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[97.359px]" data-node-id="1:551" data-name="Bold Text">
+                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:552">
+                              Noah Johnson
+                            </p>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-3 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-3 shrink-0 w-[81.297px]" data-node-id="1:553" data-name="Table Cell">
+                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:554">
+                            Dr. Sudhir
+                          </p>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-4 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-3 shrink-0 w-[81.297px]" data-node-id="1:555" data-name="Table Cell">
+                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:556">
+                            Cardiology follow-up
+                          </p>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-5 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-3 shrink-0 w-[76.813px]" data-node-id="1:557" data-name="Table Cell">
+                          <div className="bg-[#e7f8f2] content-stretch flex h-[22px] items-center px-[8px] relative rounded-[999px] shrink-0" data-node-id="1:558" data-name="Text">
+                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#128461] text-[12px] whitespace-nowrap" data-node-id="1:559">
+                              Confirmed
+                            </p>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-1 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-4 shrink-0 w-[112.922px]" data-node-id="1:560" data-name="Table Cell">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[110.922px]" data-node-id="1:561" data-name="Bold Text">
+                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:562">
+                              May 19 · 2:00
+                            </p>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-2 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-4 shrink-0 w-[99.359px]" data-node-id="1:563" data-name="Table Cell">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[97.359px]" data-node-id="1:564" data-name="Bold Text">
+                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:565">
+                              Sophia Davis
+                            </p>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-3 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-4 shrink-0 w-[81.297px]" data-node-id="1:566" data-name="Table Cell">
+                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:567">
+                            Dr. Sudhir
+                          </p>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-4 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-4 shrink-0 w-[81.297px]" data-node-id="1:568" data-name="Table Cell">
+                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:569">
+                            ECG review
+                          </p>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-5 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-4 shrink-0 w-[76.813px]" data-node-id="1:570" data-name="Table Cell">
+                          <div className="bg-[#fff5e8] content-stretch flex h-[22px] items-center px-[8px] relative rounded-[999px] shrink-0" data-node-id="1:571" data-name="Text">
+                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#bd7218] text-[12px] whitespace-nowrap" data-node-id="1:572">
+                              Pending
+                            </p>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-1 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-5 shrink-0 w-[112.922px]" data-node-id="1:573" data-name="Table Cell">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[110.922px]" data-node-id="1:574" data-name="Bold Text">
+                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:575">
+                              May 20 · 9:00
+                            </p>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-2 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-5 shrink-0 w-[99.359px]" data-node-id="1:576" data-name="Table Cell">
+                          <div className="content-stretch flex flex-col items-start relative shrink-0 w-[97.359px]" data-node-id="1:577" data-name="Bold Text">
+                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#17264b] text-[12px] whitespace-nowrap" data-node-id="1:578">
+                              Mason Clark
+                            </p>
+                          </div>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-3 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-5 shrink-0 w-[81.297px]" data-node-id="1:579" data-name="Table Cell">
+                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:580">
+                            Dr. Sudhir
+                          </p>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-4 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-5 shrink-0 w-[81.297px]" data-node-id="1:581" data-name="Table Cell">
+                          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[normal] not-italic relative shrink-0 text-[#64728f] text-[12px] whitespace-nowrap" data-node-id="1:582">
+                            Cardiology consultation
+                          </p>
+                        </div>
+                        <div className="border-[#e9edf5] border-solid border-t col-5 content-stretch flex flex-col h-[49px] items-start justify-center overflow-clip p-px relative row-5 shrink-0 w-[76.813px]" data-node-id="1:583" data-name="Table Cell">
+                          <div className="bg-[#e7f8f2] content-stretch flex h-[22px] items-center px-[8px] relative rounded-[999px] shrink-0" data-node-id="1:584" data-name="Text">
+                            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[#128461] text-[12px] whitespace-nowrap" data-node-id="1:585">
+                              Confirmed
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
       </div>
