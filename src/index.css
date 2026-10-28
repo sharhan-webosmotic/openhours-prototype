@@ -1001,6 +1001,17 @@ dd { margin: 4px 0 0; color: var(--navy); font-family: 'Inter:Semi Bold'; font-s
 
 /* Use the same uncluttered donut/legend layout on tablet-width cards. */
 @media (max-width: 1000px) {
+  .dashboard-embedded [data-node-id='1:663'] {
+    height: fit-content !important;
+    min-height: 0 !important;
+    align-self: start !important;
+    overflow: visible !important;
+  }
+  .dashboard-embedded [data-node-id='1:853'] {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
   .dashboard-embedded [data-node-id='1:356'] {
     display: block !important;
     width: 100% !important;
