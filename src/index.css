@@ -1448,3 +1448,50 @@ dd { margin: 4px 0 0; color: var(--navy); font-family: 'Inter:Semi Bold'; font-s
   }
   .dashboard-embedded [data-node-id='1:136'] { height: auto !important; overflow: visible !important; }
 }
+
+/* Reflow the dashboard's fixed-width panels when its content column is narrow, even on a laptop. */
+@container (max-width: 1100px) {
+  .dashboard-embedded [data-node-id='1:217'] {
+    width: 100%;
+    height: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-rows: auto !important;
+  }
+  .dashboard-embedded [data-node-id='1:217'] > * {
+    width: 100%;
+    min-width: 0;
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+  .dashboard-embedded [data-node-id='1:401'] {
+    width: 100%;
+    height: auto !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-rows: auto !important;
+    align-items: start;
+  }
+  .dashboard-embedded [data-node-id='1:401'] > * {
+    width: 100%;
+    min-width: 0;
+    height: auto !important;
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    align-self: start;
+  }
+  .dashboard-embedded [data-node-id='1:402'],
+  .dashboard-embedded [data-node-id='1:513'] {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+  .dashboard-embedded [data-node-id='1:411'],
+  .dashboard-embedded [data-node-id='1:522'] {
+    width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+  }
+  .dashboard-embedded [data-node-id='1:412'] { width: 650px; min-width: 650px; }
+  .dashboard-embedded [data-node-id='1:523'] { width: 710px; min-width: 710px; }
+}
