@@ -1466,6 +1466,11 @@ dd { margin: 4px 0 0; color: var(--navy); font-family: 'Inter:Semi Bold'; font-s
     min-height: 105px;
     overflow: visible !important;
   }
+  .dashboard-embedded [data-node-id='1:853'] {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
   .dashboard-embedded [data-node-id='1:136'] { height: auto !important; overflow: visible !important; }
 }
 
